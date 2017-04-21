@@ -32,13 +32,13 @@ var DEFAULTS = {
   valueType: 'name',
 
   // Defines the initial value of province.
-  province: '省li',
+  province: '省',
 
   // Defines the initial value of city.
-  city: '市li',
+  city: '市',
 
   // Defines the initial value of district.
-  district: '区li'
+  district: '区'
 };
 
 var DISTRICTS = {
