@@ -1,0 +1,397 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+.content {
+  width: 1200px;
+  margin: 0 auto;
+}
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+.clear {
+  overflow: hidden;
+}
+.col_b {
+  color: #2693d4;
+}
+.cobo_b {
+  color: #2693d4;
+  border-bottom: solid 2px #2693d4;
+}
+.bor_b {
+  border-bottom: solid 3px #2693d4;
+  color: #2693d4;
+}
+.title {
+  line-height: 20px;
+  margin: 20px 0 5px 0;
+  font-size: 14px;
+}
+.mar_no {
+  margin-right: 0px!important;
+}
+.header {
+  height: 35px;
+  line-height: 35px;
+  background-color: #f7f7f7;
+}
+.header a {
+  color: #1abcff;
+  margin: 0 10px;
+}
+.header .cart {
+  display: block;
+  width: 21px;
+  height: 17px;
+  background-image: url(../imgs/cart.png);
+  margin-top: 10px;
+}
+.header .cart_num {
+  color: #2693d4;
+  line-height: 35px;
+}
+.header .fws {
+  margin: 0 0 0 5px;
+}
+.header span {
+  margin: 2px;
+}
+.search {
+  overflow: hidden;
+  height: 90px;
+  padding-top: 25px;
+  width: 1200px;
+  margin: 0 auto;
+}
+.search .logo {
+  margin-top: 10px;
+  width: 128px;
+  height: 56px;
+  background-image: url(../imgs/logo.jpg);
+  background-size: cover;
+  float: left;
+  cursor: pointer;
+}
+.search .city {
+  width: 120px;
+  float: left;
+  line-height: 20px;
+  margin: 20px  0 0 30px;
+}
+.search .input {
+  float: left;
+  margin-left: 70px;
+}
+.search .input span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.search .input input {
+  float: left;
+  margin: 5px 0;
+  width: 470px;
+  height: 37px;
+  border: solid 2px #2693d4;
+  padding-left: 10px;
+}
+.search .input button {
+  float: left;
+  margin-top: 5px;
+  width: 100px;
+  height: 41px;
+  background-color: #2693d4;
+  background-image: url(../imgs/search.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.search .tel {
+  float: right;
+  margin: 15px 0 0 110px;
+}
+.search .tel .tel_icon {
+  float: left;
+  display: inline-block;
+  width: 45px;
+  height: 50px;
+  background-image: url(../imgs/tel.gif);
+}
+.search .tel .tel_num {
+  float: left;
+  font-size: 10.8px;
+  line-height: 50px;
+  color: #a3a3a3;
+  font-weight: bold;
+  margin-left: 5px;
+  letter-spacing: 1px;
+}
+.guide {
+  overflow: hidden;
+  width: 100%;
+  height: 45px;
+  border-bottom: solid 1px #2693d4;
+  margin-top: 5px;
+}
+.guide a {
+  float: left;
+  width: 80px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 60px;
+}
+.aboutus {
+  background-color: #f8f8f8;
+  padding-bottom: 40px;
+}
+.aboutus p {
+  line-height: 25px;
+}
+.aboutus p.p1 {
+  line-height: 85px;
+  font-size: 18px;
+}
+.footer {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  background-color: #ccc;
+  line-height: 45px;
+}
+.page {
+  margin-bottom: 150px;
+  text-align: center;
+}
+.page span {
+  display: inline-block;
+  width: 38px;
+  height: 35px;
+  line-height: 35px;
+  border: solid 1px #666;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.page .up,
+.page .down {
+  width: 68px;
+  color: #666;
+}
+.page .bord {
+  border: solid 1px #2693d4;
+  color: #2693d4;
+}
+.page .first {
+  width: 52px;
+  color: #666;
+}
+.shoplist {
+  width: 1200px;
+  margin: 0 auto;
+}
+.shoplist .liebiao {
+  width: 950px;
+  margin-right: 10px;
+  float: left;
+}
+.shoplist .liebiao .main {
+  padding: 0 10px;
+  margin-bottom: 65px;
+  overflow: hidden;
+  width: 930px;
+  border: solid 1px #ddd;
+  border-top: none;
+}
+.shoplist .liebiao .main .shangpin {
+  height: 50px;
+  line-height: 50px;
+}
+.shoplist .liebiao .main .shangpin span {
+  margin: 0 30px;
+}
+.shoplist .liebiao .main li {
+  overflow: hidden;
+  height: 122px;
+  border-top: solid 1px #ddd;
+}
+.shoplist .liebiao .main li .shop_left {
+  float: left;
+  margin: 10px 10px 10px 0;
+  width: 99px;
+  height: 99px;
+  border: solid 1px #ddd;
+}
+.shoplist .liebiao .main li .shop_left .shoplogo {
+  display: block;
+  width: 52px;
+  height: 56px;
+  background-size: cover;
+  background-image: url(../imgs/shoplogo.jpg);
+  margin: 20px auto;
+}
+.shoplist .liebiao .main li .shop_mid {
+  padding: 10px 0;
+  margin-left: 5px;
+  float: left;
+}
+.shoplist .liebiao .main li .shop_mid p {
+  height: 35px;
+  width: 600px;
+}
+.shoplist .liebiao .main li .shop_mid p span {
+  margin-left: 70px;
+}
+.shoplist .liebiao .main li .shop_mid p.address {
+  line-height: 35px;
+}
+.shoplist .liebiao .main li .shop_right {
+  padding-top: 10px;
+  float: right;
+}
+.shoplist .liebiao .main li .shop_right p {
+  font-size: 24px;
+  font-weight: lighter;
+  color: red;
+  line-height: 50px;
+  text-align: center;
+}
+.shoplist .liebiao .main li .shop_right p span {
+  margin-top: 20px;
+  float: left;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #2693d4;
+  cursor: pointer;
+}
+.shoplist .picture {
+  float: left;
+  width: 238px;
+  height: 650px;
+  border: solid 1px #ddd;
+}
+.shoplist .picture li {
+  text-align: center;
+  width: 170px;
+  height: 150px;
+  margin: 0 auto;
+  border-bottom: solid 2px #ddd;
+}
+.shoplist .picture li.bord_b {
+  border-bottom: none;
+}
+.shoplist .picture li span {
+  display: block;
+  width: 95px;
+  height: 95px;
+  background-size: cover;
+  margin: 10px auto 20px auto;
+}
+.shoplist .picture li span.pic_1 {
+  background-image: url(../imgs/pic_1.jpg);
+}
+.shoplist .picture li span.pic_2 {
+  background-image: url(../imgs/pic_2.jpg);
+}
+.shoplist .picture li span.pic_3 {
+  background-image: url(../imgs/pic_3.jpg);
+}
+.shoplist .picture li span.pic_4 {
+  background-image: url(../imgs/pic_4.jpg);
+}
+.shoplist .picture li p {
+  font-size: 18px;
+}
+.excle {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+.excle tr {
+  height: 20px;
+  line-height: 20px;
+  border: solid 1px #ddd;
+}
+.excle td {
+  border: solid 1px #ddd;
+}
+.excle td.short {
+  width: 100px;
+  text-align: center;
+  font-size: 16px;
+}
+.excle td.long {
+  padding: 10px 20px;
+}
+.excle td select {
+  width: 85px;
+  height: 20px;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  margin-right: 5px;
+  background-color: #f7f7f7;
+}
+.excle td span {
+  margin-right: 20px;
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+.excle td .all {
+  padding: 0 10px;
+  background-color: #2693d4;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  margin-right: 20px;
+}
+.order {
+  width: 100%;
+  background-color: #f7F7F7;
+  height: 40px;
+  line-height: 40px;
+  border: solid 1px #ddd;
+}
+.order li {
+  float: left;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  position: relative;
+}
+.order li.colligate {
+  width: 107px;
+  background-color: #2693d4;
+  color: #fff;
+}
+.order li .arr {
+  position: absolute;
+  top: 12px;
+  left: 75px;
+  width: 17px;
+  height: 13px;
+  display: block;
+  background-image: url(../imgs/arr.png);
+  background-size: cover;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>信达-列表页</title>
+	<link rel="stylesheet" href="../css/shop_list.css"/>
+</head>
+<body>
+<!-- 头部 -->
+<div id="app">
+    <vue-header></vue-header>
+    <vue-header-logo></vue-header-logo>
+	<!-- 主要内容部分-->
+	<div class="shoplist clear">
+		<!-- js判断是财务税收还是公司工商 改变  vforVif  的值-->
+		<p class="title" v-for="item in producType" v-if="item.code==vforVif">首页/{{item.name}}</p>
+		<div class="liebiao">
+			<table border="1" class="excle" v-for="item in producType" v-if="item.code==vforVif">
+				<tr>
+					<td class="short">服务分类</td>
+					<td class="long" >
+						<!-- <span class="all">公司注册</span> -->
+						<span v-for="(item1,key,index) in item.itemList" :class="index == spanKey?'all':''" @click="changeSpanKey(index)">{{item1.name}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="short">类型</td>
+					<!-- js判断是财务税收还是公司工商 改变  item2Vif  的值-->
+					<td class="long" v-for="(item1,key,index) in item.itemList" v-if="index ==item2Vif">
+						<!-- <span class="all">分公司注册</span> -->
+						<span v-for="(item2,key,index) in item1.itemList" @click="changeSpanKey2(index)" :class="index == spanKey2?'all':''">{{item2.name}}</span>
+						
+					</td>
+				</tr>
+				<tr>
+					<td class="short">服务区域</td>
+					<!--  级联有bug。。。。。未解决  -->
+					<td class="long" id="jilian" data-toggle="distpicker">
+						<!-- <v-distpicker> -->
+							<select>
+							</select>
+							<select>
+							</select>
+							<select>
+							</select>
+						<!-- </v-distpicker> -->
+					</td>
+				</tr>
+			</table>
+			<!-- 综合排序 -->
+			<ul class="order">
+				<li class="colligate">综合排序</li>
+				<li>价格<span class="arr"></span></li>
+			</ul>
+			<ul class="main">
+				<p class="shangpin">
+					<span class="f-l">商品</span>
+					<span class="f-r">价格</span>
+				</p>
+				<!-- v-for 循环-->
+				<li v-for="item in product.data">
+					<div class="shop_left">
+						<span class="shoplogo"></span>
+					</div>
+					<div class="shop_mid">
+						<p>{{item.serviceName}}</p>
+						<p>{{item.serviceInfo}}</p>
+						<p class="address">{{item.providerName}}
+							<span>{{item.regionName}}</span>
+						</p>
+					</div>
+					<div class="shop_right">
+						<p>￥{{(item.price/100).toFixed(2)}}</p>
+						<p><span @click="goShopDetil">立即购买</span><span>加入购物车</span></p>
+					</div>
+				</li>
+			</ul>	
+		</div>
+		<ul class="picture">
+			<li>
+				<span class="pic_1"></span>
+				<p>平台担保</p>
+			</li>
+			<li>
+				<span class="pic_2"></span>
+				<p>优质服务</p>
+			</li>
+			<li>
+				<span class="pic_3"></span>
+				<p>过程监督</p>
+			</li>
+			<li class="bord_b">
+				<span class="pic_4"></span>
+				<p>增值服务</p>
+			</li>
+		</ul>
+	</div>
+	<!-- 上一页下一页 -->
+	<div class="page">
+		<span class="up" @click="upGo">上一页</span>
+		<!-- product.pageNum恒为一 ，借口有问题下个方法不能用-->
+		<span :class="n==page_num?'bord':''" v-for = "n in product.pageSize" @click="pageGo(n)">{{n}}</span>
+		<span class="down" @click="downGo">下一页</span>
+	</div>
+	<!--关于我们 脚部 -->
+	<vue-footer></vue-footer>
+    </div>
+</body>
+	<script id="mainScript" src="../js/require.js" data-main="../js/src/shop-list"></script>
+	<script src="../js/config.js"></script>
+</html>

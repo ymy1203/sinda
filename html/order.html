@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>信达-订单详情</title>
+	<link rel="stylesheet" href="../css/order.css"/>
+</head>
+<body>
+<!-- 头部 -->
+<div id="app">
+    <vue-header></vue-header>
+    <vue-header-logo></vue-header-logo>
+	<!-- 主要内容部分-->
+	<div class="order">
+		<p class="title">首页/支付</p>
+		<div class="list">
+			<p class="title_r">订单详情</p>
+			<ul class="or_li">
+				<li class="li1">
+					<div>订单编号：<span>S6272827272727211</span></div>
+					<div>创建时间：2017-07-01 01：12：21</div>
+					<div class="mar_no">订单金额：￥2000.00元
+					<span class="span_red">订单明细&nbsp;<span class="sanjiao"></span></span></div>
+				</li>
+				<li class="li2">
+					<div>服务名称：注册分公司</div>
+					<div>单价：<span>￥800.00元</span> </div>
+					<div>数量：<span>1</span></div>
+					<div class="mar_no">服务总额：<span>￥800.00元</span></div>
+				</li>
+				<li class="li2">
+					<div>服务名称：注册分公司</div>
+					<div>单价：<span>￥800.00元</span> </div>
+					<div>数量：<span>1</span></div>
+					<div class="mar_no">服务总额：<span>￥800.00元</span></div>
+				</li>
+			</ul>
+		</div>
+		<div class="paytype">
+			<p class="title_r">支付方式</p>
+			<div class="type">
+				<p>非网银支付</p>
+				<div class="clear box">
+					<input type="radio" name="pay_platform" class="f-l">
+					<div class="bank"></div>
+				</div>
+				<p>平台支付</p>
+				<ul>
+					<li class="box">
+						<input type="radio" name="pay_platform" class="f-l">
+						<div class="weixin"></div>
+						<div class="wxpay">微信支付</div>
+					</li>
+					<li class="box">
+						<input type="radio" name="pay_platform" class="f-l">
+						<div class="zfb"></div>
+						<div class="wxpay">支付宝支付</div>
+					</li>
+				</ul>
+				<p>自助转账<span>因限额不能支付时，建议使用自助转</span></p>
+				<div class="zs_bank">
+					<input type="radio" name="pay_platform" class="f-l">
+					<div class="zhaoshang"></div>
+					<div class="f-l ps">
+						<p>开户账号：<span>110916853310605</span></p>
+						<p>开户名：<span>北京爱蓝领网络科技有限公司</span></p>
+						<p>开户银行：<span>招商银行股份有限公司北京东三环支行</span></p>
+					</div>
+				</div>
+				<span class="red">注：转账时请将订单编号备注在付款信息里：转账完成后，请通知客服。</span>
+			</div>
+		</div>
+		<p class="total">金额总计&nbsp;<span class="font_b">￥800.00</span></p>
+		<p class="calculate">
+			<a href="jiesuan.html">去结算</a>
+		</p>
+	</div>
+	<!--关于我们 脚部 -->
+	<vue-footer></vue-footer>
+    </div>
+</body>
+	<script id="mainScript" src="../js/require.js" data-main="../js/src/index"></script>
+	<script src="../js/config.js"></script>
+</html>

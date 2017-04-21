@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>信达-商品详情</title>
+	<link rel="stylesheet" href="../css/wares.css"/>
+</head>
+<body>
+<!-- 头部 -->
+<div id="app">
+    <vue-header></vue-header>
+    <vue-header-logo></vue-header-logo>
+	<!-- 主要内容部分-->
+	<div class="wares">
+		<p class="title">首页/购物车</p>
+		<div class="intro">
+			<span class="img" :style = "'background-image:url(http://115.182.107.203:8088/xinda/pic'+fuwu.product.img+');'"></span>
+			<div class="f-l">
+				<!-- 产品名字 -->
+				<h2>{{fuwu.product.name}}</h2>
+				<p>{{fuwu.product.info}}</p>
+				<div class="market">
+					<!-- 市场价  取整-->
+					<p>市场价：<span class="p_b">￥{{(fuwu.product.marketPrice/100).toFixed(0)}}&nbsp;&nbsp;</span></p>
+					<!-- 价格   保留两位小数-->
+					<p>价&nbsp;&nbsp;&nbsp;格：<span class="red">￥{{(fuwu.providerProduct.price/100).toFixed(2)}}</span>元</p>
+				</div>
+				<!-- 这个借口根据ID找他的内容   还没有写 -->
+				<p>类型：<span class="branch">{{fuwu.product.styleId}}==>还没有写</span></p>
+				<p>地区：{{fuwu.providerRegionText}}</p>
+				<div class="clear">
+					<p>
+						<span class="f-l">购买数量：</span>
+						<div class="addorreduce f-l">
+							<span>+</span>
+							<input type="text" value="1">
+							<span>-</span>
+						</div>
+					</p>
+				</div>
+					
+				<div class="buttons">
+					<button class="bg_b">立即购买</button>
+					<button>加入购物车</button>
+				</div>
+			</div>
+		</div>
+		<img src="../imgs/add.jpg">
+		<div class="fwnr">
+			<ul class="order">
+				<li class="colligate">服务内容</li>
+				<li>商品评价</li>
+			</ul>
+			<ul class="main" v-for="item in fuwu.serviceList" >
+				<li v-html = "item.serviceContent">
+					<!-- <p>{{item.serviceInfo}}</p> -->
+					<!-- <p>所需资料：</p>
+					<p>1.法人身份证复印件</p>
+					<p>2.房产证原件及复印件</p>
+					<p>3.租房合同原件及复印件</p>
+					<p>4.股东是个人的提供身份证复印件</p>
+					<p>5.股东是企业的提供企业营业执照副本原件复印件，加盖公章</p>
+					<p>6.总公司营业执照副本复印件</p> -->
+				</li>
+				<!-- <li>
+					<p>服务内容：</p>
+					<p>1.核名</p>
+					<p>2.核准通知书</p>
+					<p>3.上传资料/现场递交 </p>
+					<p>4.资料审核 </p>
+					<p>5.审核通过 </p>
+					<p>6.工商取营业执照</p>
+					<p>7.备案刻章</p>
+					<p>8.交接证件</p>
+				</li>
+				<li>
+					<p>服务周期</p>
+					<p>7~25个工作日不等（不同区域，办理时间有一定差异）</p>
+				</li>
+				<li>
+					<p>服务流程</p>
+					<p>1.办理营业执照10-15个工作日</p>
+					<p>2.工商核名</p>
+					<p>3.网上登记</p>
+					<p>4.现场交材料</p>
+					<p>5.办理营业执照</p>
+				</li> -->
+			</ul>
+		</div>
+		<div class="ask">
+			<div class="bg_w">
+				<h2>顶级服务商</h2>
+				<p>北京信达服务中心</p>
+				<button>马上咨询</button>
+			</div>
+			<div class="look">查看服务商</div>
+		</div>
+	</div>
+	<!--关于我们 脚部 -->
+	<vue-footer></vue-footer>
+    </div>
+</body>
+	<script id="mainScript" src="../js/require.js" data-main="../js/src/wares"></script>
+	<script src="../js/config.js"></script>
+</html>

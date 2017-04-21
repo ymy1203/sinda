@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>信达-会员中心</title>
+	<link rel="stylesheet" href="../css/member.css"/>
+	<!-- <script  src="../js/laydate/laydate.js"></script> -->
+</head>
+<body>
+<!-- 头部 -->
+<div id="app">
+    <vue-header></vue-header>
+    <vue-header-logo></vue-header-logo>
+	<!-- 主要内容部分 -->
+	<div class="member">
+		<p class="title">首页/公司工商</p>
+		<div class="clear">
+			<!-- 会员中心 -->
+			<div class="membercenter">
+				<div class="center_top bg_b">
+					<div class="touxiang">
+					</div>
+					<p>1234567</p>
+				</div>
+				
+				<ul>
+					<li class=" bg_b"><span class="men_i1"></span>我的订单</li>
+					<li><span class="men_i2"></span>用户评价</li>
+					<li><span class="men_i3"></span>账户设置</li>
+				</ul>
+			</div>
+			<div class="mem_right f-l">
+				<!-- 我的订单 -->
+				<div class="myorder">
+					<p class="title_r"><span>我的订单</span></p>
+					<div class="order_num">
+						<span>订单号：</span>
+						<input type="text" placeholder="请输入订单号搜索"  >
+						<button>搜索</button>
+					</div>
+					<div class="create">
+						<span>创建时间：</span>
+						<input type="text" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" class="laydate-icon" >
+						<input type="text" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" class="laydate-icon" >
+					</div>
+					<div class="order_excel">
+						<p class="e_title">
+							<span class="sp_name">商品名称</span>
+							<span>单价</span>
+							<span>数量</span>
+							<span>总金额</span>
+							<span>订单状态</span>
+							<span>订单操作</span>
+						</p>
+					</div>
+					<div class="order_list">
+						<p class="tr1">
+							订单号：<span class="list_num">S347484929274490</span>
+							下单时间：<span class="list_time">2017-04-01 01：23：32</span>
+						</p>
+						<ul class="list_1">
+							<li class="li_center">
+								<ul class="ul1">
+									<li class="li1">
+										<span></span>
+										<div class="com_name">
+											 <p>信达北京服务中心注册分公司</p>
+										</div>
+										<div class="danjia">￥800.00</div>
+									</li>
+									<li class="li2">￥800.00</li>
+									<li class="li3">等待买家付款</li>
+								</ul>
+								<ul>
+									<li class="li1">
+										<span></span>
+										<div class="com_name">
+											 <p>信达北京服务中心注册分公司</p>
+										</div>
+										<div class="danjia">￥800.00</div>
+										<div class="li_num">1</div>
+									</li>
+									<li class="li2">￥800.00</li>
+									<li class="li3">等待买家付款</li>
+								</ul>
+							</li>
+							<li class="pay">
+								<span>付款</span>
+								<p class="delete">删除订单</p>
+							</li>
+						</ul>
+					</div>
+					<div class="order_list mar_b">
+						<p class="tr1">
+							订单号：<span class="list_num">S347484929274490</span>
+							下单时间：<span class="list_time">2017-04-01 01：23：32</span>
+						</p>
+						<ul class="list_1">
+							<li class="li_center">
+								<ul class="ul1">
+									<li class="li1">
+										<span></span>
+										<div class="com_name">
+											 <p>信达北京服务中心注册分公司</p>
+										</div>
+										<div class="danjia">￥800.00</div>
+									</li>
+									<li class="li2">￥800.00</li>
+									<li class="li3">等待买家付款</li>
+								</ul>
+								<ul>
+									<li class="li1">
+										<span></span>
+										<div class="com_name">
+											 <p>信达北京服务中心注册分公司</p>
+										</div>
+										<div class="danjia">￥800.00</div>
+										<div class="li_num">1</div>
+									</li>
+									<li class="li2">￥800.00</li>
+									<li class="li3">等待买家付款</li>
+								</ul>
+							</li>
+							<li class="pay">
+								<span>付款</span>
+								<p class="delete">删除订单</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 用户评价 -->
+				<div class="usercomment">
+					<p class="title_r"><span>我的评价</span></p>
+					<ul class="yesorno">
+						<li class="bg_b">未评价</li>
+						<li>已评价</li>
+					</ul>
+					<ul class="com_list">
+						<li>
+							<div class="li_left"></div>
+							<div class="li_center">
+								<p class="p1">信达背景服务中心</p>
+								<p>服务单号：<span>B1823</span>              购买时间：2016-01-01 02：12：21</p>
+								<p>购买内容：test</p>
+							</div>
+							<div class="com_go"><span>去评价</span></div>
+						</li>
+					</ul>
+
+				</div>
+				<!-- 账户设置 -->
+				<div class="set">
+					<p class="title_r"><span class="cobo_b">账户设置</span><span>修改密码</span></p>
+					<!-- 设置个人资料 -->
+					<div class="setaccount">
+						<p class="p1">
+							<span>当前头像：</span>
+							<span class="now_tx"></span>
+						</p>
+						<p>
+							<span>姓名：</span>
+							<input type="text" class="set_name" placeholder="123">
+						</p>
+						<p>
+							<span>性别：</span>
+							<input type="radio">男
+							<input type="radio" class="radio_nv">女
+						</p>
+						<p>
+							<span>邮箱：</span>
+							<input type="text" class="set_email" placeholder="请输入邮箱">
+						</p>
+						<p>
+							<span>所在地区：</span>
+							<select>
+								<option>北京</option>
+							</select>
+							<select>
+								<option>北京</option>
+							</select>
+							<select>
+								<option>海淀区</option>
+							</select>
+						</p>
+						<button class="keep">保存</button>
+					</div>
+					<!-- 修改密码 -->
+					<div class="change_psw">
+						<p>
+							<span>旧密码：</span>
+							<input type="text">
+						</p>
+						<p>
+							<span>新密码：</span>
+							<input type="text">
+						</p>
+						<p>
+							<span>再次输入新密码：</span>
+							<input type="text">
+						</p>
+						<button class="keep">保存</button>
+					</div>
+				</div>
+				<!-- 上一页下一页 -->
+				<div class="page">
+					<span class="up">上一页</span>
+					<span class="bord">1</span>
+					<span class="down">下一页</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--关于我们 脚部 -->
+	<vue-footer></vue-footer>
+    </div>
+</body>
+	<script id="mainScript" src="../js/require.js" data-main="../js/src/index"></script>
+	<script src="../js/config.js"></script>
+</html>

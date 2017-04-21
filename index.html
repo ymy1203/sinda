@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>信达-首页</title>
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+    <div id="app">
+        <!-- 头部 -->
+		<div class="header">
+			<div class="content">
+				<span>欢迎来到信达！</span>
+				<a href="html/login.html">登录</a>
+				<a href="html/register.html">快速注册</a>
+				<div class="f-r">
+					<span class="cart f-l"></span>
+					<span>购物车<span class="cart_num">0</span>件</span>
+					<span class="col_b fws">服务商入口</span>
+				</div>
+			</div>
+		</div>
+        <!-- logo和搜索框 -->
+		<div class="search clear">
+			<div class="logo"></div>
+			<div class="city">
+				<p>北京市</p>
+				<p class="col_b">[切换城市]</p>
+			</div>
+			<div class="input">
+                <!-- click事件产品被点击   样式改变 -->
+				<span @click="cpDown" :class="cpTrue?'col_b':''">产品</span>
+                <span  class="col_b">|</span>
+                <!-- click事件服务商被点击   样式改变 -->
+                <span @click="fwsDown" :class="cpTrue?'':'col_b'">服务商</span>
+				<div class="clear">
+					<input id="cp_input" type="text" placeholder="搜索您需要的服务或服务商">
+					<button @click="submit_go"></button>
+				</div>
+				<span>热门服务&nbsp:</span>
+                <span><a href="#">社保开户</a></span>
+                <span><a href="#">公司注册</a></span>
+			</div>
+			<div class="tel">
+				<span class="tel_icon"></span>
+				<span class="tel_num">010-83421842</span>
+			</div>
+		</div>
+		<!-- 导航条 -->
+		<div class="guide">
+			<div class="content">
+				<a class="bor_b"  href="javascript:void(0)">全部产品</a>
+				<a href="html/shop_list.html">财税服务</a>
+				<a href="html/shop_list.html">公司工商</a>
+				<a href="html/join.html">加盟我们</a>
+				<a href="html/shop.html">店铺</a>
+			</div>
+		</div>
+        <!-- 列表和轮播图 -->
+        <div class="list">
+            <ul>
+                <!-- 第一级循环 -->
+                <li v-for="item in producType">
+                    <img src="./imgs/shui.png">
+                    <p class="p2">{{item.name}}</p>
+                        <!-- 第二级循环 （未排序）-->
+                        <span v-for="item1 in item.itemList">{{item1.name}}</span>
+                    <div class="liDetil">
+                        <p v-for="item1 in item.itemList">
+                            <span class="ptittle">{{item1.name}}></span>
+                            <!-- 第三级循环 -->
+                            <span class="p_center" v-for="item2 in item1.itemList">{{item2.name}}</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <!--轮播-->
+            <div>
+                <img src="./imgs/lunbo.jpg">
+            </div>
+        </div>
+        <!-- 明星产品推荐 -->
+        <!-- 接口坏掉了 -->
+        <div class="star">
+            <p class="p3"><span class="tri"></span>明星产品推荐</p>
+            <ul>
+                <li>
+                    <div class="icon1"></div>
+                    <h3>标准五险一金</h3>
+                    <p>订制化社保代理，定制化代缴服务</p>
+                    <p><span class="col_b">20</span>元/人/月</p>
+                </li>
+                <li>
+                    <div class="icon2"></div>
+                    <h3>内资有限公司注册</h3>
+                    <p>一键完成注册，快速开办公司</p>
+                    <p><span class="col_b">600</span>元/次</p>
+                </li>
+                <li>
+                    <div class="icon3"></div>
+                    <h3>小规模代理记账／年</h3>
+                    <p>专业会计报税，高效、便捷、贴心</p>
+                    <p><span class="col_b">3000</span>元/年</p>
+                </li>
+                <li class="li_no">
+                    <div class="icon3"></div>
+                    <h3>国内普通商标注册</h3>
+                    <p>次日提交商标申请，最快保护品牌价值</p>
+                    <p><span class="col_b">1000</span>元/年</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 初创企业必备 -->
+        <div class="chuchuang">
+            <p class="p3"><span class="tri"></span>初创企业必备</p>
+            <ul>
+                <!-- vue :v-for循环 -->
+                <li v-for="item in starTeams.product">
+                    <div class="icon"></div>
+                    <p class="p4">{{item.providerName}}</p>
+                    <h3>{{item.serviceName}}</h3>
+                    <p class="p5">{{item.serviceInfo}}</p>
+                    <p><span class="col_b">￥{{item.price.toString().substr(0,4)}}</span>元</p>
+                    <p class="p6">查看详情</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 知识产权 (静态)-->
+        <div class="knowledge">
+            <p class="p3"><span class="tri"></span>知识产权</p>
+            <div class="kno_img">
+                <img src="./imgs/zscq_bg.jpg" class="f-l mar_r">
+                <div class="f-l clear ">
+                    <div class="clear">
+                        <img src="./imgs/sbzc_bg.jpg" class="f-l mar_r">
+                        <div class="f-l"><img src="./imgs/bqzl_bg.jpg"></div>
+                    </div>
+                    <img src="./imgs/zzq_bg.jpg">
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <span class="k_icon1"></span>
+                    <div class="f-l">
+                        <p class="p6">资质认证</p>
+                        <p>服务商100%实名认证</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="k_icon2"></span>
+                    <div class="f-l">
+                        <p class="p6">支付安全</p>
+                        <p>明码标价支付</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="k_icon3"></span>
+                    <div class="f-l">
+                        <p class="p6">保险赔付</p>
+                        <p>出现问题平台赔付</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="k_icon4"></span>
+                    <div class="f-l">
+                        <p class="p6">售后无忧</p>
+                        <p>客服经理全程跟进</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 推荐服务商&推荐服务 -->
+        <div class="tuijian">
+            <p class="p3">
+                <span class="tri" :style="tri_left"></span>
+                <span class="fuwushang" @click="service_man" :class="service_show?'col_b':''">推荐服务商</span>
+                <span class="fuwu" @click="service" :class="service_show?'':'col_b'">推荐服务</span>
+            </p>
+            <!-- 推荐服务商 -->
+            <ul class="tjfws" v-if="service_show">
+                <li>
+                    <div class="icon"></div>
+                    <p class="p7">北京光大集团</p>
+                    <h3>北京光大知识产权代理</h3>
+                    <p>服务指数：8.9分</p>
+                    <p>提供的服务</p>
+                    <div class="spans">
+                        <span>实用新...</span>
+                        <span>商标驳...</span>
+                        <span>专利申...</span>
+                        <span>更多...</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"></div>
+                    <p class="p7">北京光大集团</p>
+                    <h3>北京光大知识产权代理</h3>
+                    <p>服务指数：8.9分</p>
+                    <p>提供的服务</p>
+                    <div class="spans">
+                        <span>实用新...</span>
+                        <span>商标驳...</span>
+                        <span>专利申...</span>
+                        <span>更多...</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"></div>
+                    <p class="p7">北京光大集团</p>
+                    <h3>北京光大知识产权代理</h3>
+                    <p>服务指数：8.9分</p>
+                    <p>提供的服务</p>
+                    <div class="spans">
+                        <span>实用新...</span>
+                        <span>商标驳...</span>
+                        <span>专利申...</span>
+                        <span>更多...</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"></div>
+                    <p class="p7">北京光大集团</p>
+                    <h3>北京光大知识产权代理</h3>
+                    <p>服务指数：8.9分</p>
+                    <p>提供的服务</p>
+                    <div class="spans">
+                        <span>实用新...</span>
+                        <span>商标驳...</span>
+                        <span>专利申...</span>
+                        <span>更多...</span>
+                    </div>
+                </li>
+            </ul>
+            <!-- 推荐服务 -->
+            <ul class="tjfw" v-else>
+                <li>
+                    <div class="icon"></div>
+                    <p class="p4">北京光大集团</p>
+                    <h3>商标快速注册通道</h3>
+                    <p class="p5">北京宇易知识产权代理有限</p>
+                    <p><span class="parse">￥1400元</span></p>
+                    <p class="p6">查看详情</p>
+                </li>
+                <li>
+                    <div class="icon"></div>
+                    <p class="p4">北京光大集团</p>
+                    <h3>商标快速注册通道</h3>
+                    <p class="p5">北京宇易知识产权代理有限</p>
+                    <p><span class="parse">￥1400元</span></p>
+                    <p class="p6">查看详情</p>
+                </li>
+                <li>
+                    <div class="icon"></div>
+                    <p class="p4">北京光大集团</p>
+                    <h3>商标快速注册通道</h3>
+                    <p class="p5">北京宇易知识产权代理有限</p>
+                    <p><span class="parse">￥1400元</span></p>
+                    <p class="p6">查看详情</p>
+                </li>
+                <li>
+                    <div class="icon"></div>
+                    <p class="p4">北京光大集团</p>
+                    <h3>商标快速注册通道</h3>
+                    <p class="p5">北京宇易知识产权代理有限</p>
+                    <p><span class="parse">￥1400元</span></p>
+                    <p class="p6">查看详情</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 合作伙伴 -->
+        <div class="hezuo">
+            <p class="p3">
+                <span class="tri"></span>合作伙伴
+            </p>
+            <ul>
+                <li class="partner1"></li>
+                <li class="partner2"></li>
+                <li class="partner3"></li>
+                <li class="partner4"></li>
+                <li class="partner5"></li>
+                <li class="partner6"></li>
+            </ul>
+        </div>
+        <vue-footer></vue-footer>
+    </div>
+</body>
+	<script id="mainScript" src="js/require.js" data-main="js/src/index"></script>
+	<script src="js/config.js"></script>
+</html>

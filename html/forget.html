@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>信达-忘记密码</title>
+	<link rel="stylesheet" href="../css/lorefo.css"/>
+</head>
+<body>
+<!-- 头部 -->
+<div id="app">
+    <vue-header></vue-header>
+	<!-- logo和搜索框 -->
+	<div class="bg_w">
+		<div class="search clear">
+			<div class="logo" onclick="goIndex()"></div>
+			<div class="welcome">
+				欢迎注册
+			</div>
+		</div>
+	</div>
+	<!-- 主要内容部分-->
+	<div class="login">
+		<div class="submit">
+			<p><input type="text" placeholder="请输入手机号"></p>
+			<p>
+				<input type="text"  placeholder="请输入验证码" class="short">
+				<span class="yz_pic"></span>
+			</p>
+			<p>
+				<input type="text"  placeholder="请输入短信验证码" class="short">
+				<button class="clickget">点击获取</button>
+			</p>
+			<p><input type="text"  placeholder="请输入新密码"></p>
+			<p><input type="text"  placeholder="请再次确认密码"></p>
+			<p><button>确认修改</button></p>
+			
+		</div>
+		<div class="line"></div>
+		<div class="boy">
+			<p>想起密码来了？</p>
+			<p><a href="login.html">返回登录>></a></p>
+			<span class="people"></span>
+		</div>
+	</div>
+	<!-- 脚部 -->
+	<!-- <vue-footer></vue-footer> -->
+	<!-- 脚部 -->
+	<div class="footer">
+		©Copyright 2016北京信达科技有限公司  京ICP备  16011621号
+	</div>
+    </div>
+</body>
+	<script id="mainScript" src="../js/require.js" data-main="../js/src/index"></script>
+	<script src="../js/config.js"></script>
+</html>

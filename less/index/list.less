@@ -1,0 +1,66 @@
+.list{
+	.content;
+	overflow: hidden;
+	ul{
+		float: left;
+		width: 200px;
+		background-color: #15263c;
+		color: #fff;
+		height: 400px;
+		li{
+			padding:0 10px  0 50px;
+			position: relative;
+			&:hover{
+				background-color: #2693d4;
+			}
+			&:hover .liDetil{
+				display: block;
+			}
+			.p2{
+				padding-top: 10px;
+				font-size: 15px;
+				line-height: 35px;
+			}
+			>span{
+				margin-right: 20px;
+				line-height: 30px; 
+				
+			font-size: 12px!important;
+			}
+			img{
+				position: absolute;
+				padding-top: 10px;
+				top:15px;
+				left:15px;
+			}
+			.liDetil{
+				display: none;
+				width: 970px;
+				height: 100%;
+				top:0;
+				left:200px;
+				background-color: rgba(255,255,255,0.5);
+				position: absolute;
+				padding: 0 15px 0 15px;
+				p{
+					padding-top: 10px;
+					span.ptittle{
+						padding-right: 20px;
+					}
+					span.p_center{
+						font-size: 12px;
+						height: 16px;
+						line-height: 16px;
+						padding-left: 8px;
+						padding-right: 8px;
+						border-left: solid 1px #cfd8e3;
+					}
+				}
+			}
+		}
+		li:nth-child(3){
+			height: 130px;
+		}
+	}
+	
+}

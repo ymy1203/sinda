@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>信达-支付结果</title>
+	<link rel="stylesheet" href="../css/pay.css"/>
+</head>
+<body>
+<!-- 头部 -->
+<div id="app">
+    <vue-header></vue-header>
+    <vue-header-logo></vue-header-logo>
+	<!-- 主要内容部分-->
+	<div class="pay content">
+		<p class="title">首页/支付</p>
+		<!-- 支付成功 -->
+		<div class="success">
+			<p class="su_title">支付成功</p>
+			<div class="result">
+				<div class="re_main">
+					<span class="su_icon icon"></span>
+					<div class="f-l clear su_right">
+						<p class="rp1">支付成功！</p>
+						<p class="rp2">我们将尽快确认您的（订单号：<span>S7163637282821</span>）付款信息。</p>
+						<p class="rp3">如有问题，请联系客服：<span>010-83421842</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 支付失败 -->
+		<div class="fail">
+			<p class="su_title">支付失败</p>
+			<div class="result">
+				<div class="re_main">
+					<span class="fa_icon icon"></span>
+					<div class="f-l clear su_right">
+						<p class="rp4">支付失败！</p>
+						<p class="rp2">支付未成功：让我们再试一次吧！
+							<a href="#">返回支付页</a>
+						</p>
+						<p class="rp3">如有问题，请联系客服：<span>010-83421842</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--关于我们 脚部 -->
+	<vue-footer></vue-footer>
+    </div>
+</body>
+	<script id="mainScript" src="../js/require.js" data-main="../js/src/index"></script>
+	<script src="../js/config.js"></script>
+</html>

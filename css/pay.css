@@ -1,0 +1,250 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+.content {
+  width: 1200px;
+  margin: 0 auto;
+}
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+.clear {
+  overflow: hidden;
+}
+.col_b {
+  color: #2693d4;
+}
+.cobo_b {
+  color: #2693d4;
+  border-bottom: solid 2px #2693d4;
+}
+.bor_b {
+  border-bottom: solid 3px #2693d4;
+}
+.title {
+  line-height: 20px;
+  margin: 20px 0 5px 0;
+  font-size: 14px;
+}
+.mar_no {
+  margin-right: 0px!important;
+}
+.header {
+  height: 35px;
+  line-height: 35px;
+  background-color: #f7f7f7;
+}
+.header a {
+  color: #1abcff;
+  margin: 0 10px;
+}
+.header .cart {
+  display: block;
+  width: 21px;
+  height: 17px;
+  background-image: url(../imgs/cart.png);
+  margin-top: 10px;
+}
+.header .cart_num {
+  color: #2693d4;
+  line-height: 35px;
+}
+.header .fws {
+  margin: 0 0 0 5px;
+}
+.header span {
+  margin: 2px;
+}
+.search {
+  overflow: hidden;
+  height: 90px;
+  padding-top: 25px;
+  width: 1200px;
+  margin: 0 auto;
+}
+.search .logo {
+  margin-top: 10px;
+  width: 128px;
+  height: 56px;
+  background-image: url(../imgs/logo.jpg);
+  background-size: cover;
+  float: left;
+}
+.search .city {
+  width: 120px;
+  float: left;
+  line-height: 20px;
+  margin: 20px  0 0 30px;
+}
+.search .input {
+  float: left;
+  margin-left: 70px;
+}
+.search .input span {
+  margin: 0 5px;
+}
+.search .input input {
+  float: left;
+  margin: 5px 0;
+  width: 470px;
+  height: 37px;
+  border: solid 2px #2693d4;
+  padding-left: 10px;
+}
+.search .input button {
+  float: left;
+  margin-top: 5px;
+  width: 100px;
+  height: 41px;
+  background-color: #2693d4;
+  background-image: url(../imgs/search.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.search .tel {
+  float: right;
+  margin: 15px 0 0 110px;
+}
+.search .tel .tel_icon {
+  float: left;
+  display: inline-block;
+  width: 45px;
+  height: 50px;
+  background-image: url(../imgs/tel.gif);
+}
+.search .tel .tel_num {
+  float: left;
+  font-size: 10.8px;
+  line-height: 50px;
+  color: #a3a3a3;
+  font-weight: bold;
+  margin-left: 5px;
+  letter-spacing: 1px;
+}
+.guide {
+  overflow: hidden;
+  width: 100%;
+  height: 45px;
+  border-bottom: solid 1px #2693d4;
+  margin-top: 5px;
+}
+.guide a {
+  float: left;
+  width: 80px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 60px;
+}
+.aboutus {
+  background-color: #f8f8f8;
+  padding-bottom: 40px;
+}
+.aboutus p {
+  line-height: 25px;
+}
+.aboutus p.p1 {
+  line-height: 85px;
+  font-size: 18px;
+}
+.footer {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  background-color: #ccc;
+  line-height: 45px;
+}
+.success,
+.fail {
+  margin-bottom: 200px;
+}
+.success .su_title,
+.fail .su_title {
+  line-height: 30px;
+  border-bottom: solid 2px #f7f7f7;
+  margin-bottom: 10px;
+}
+.success .result,
+.fail .result {
+  height: 255px;
+  background-color: #f7f7f7;
+  padding-top: 125px;
+}
+.success .result .re_main,
+.fail .result .re_main {
+  width: 800px;
+  margin: 0 auto;
+}
+.success .result .re_main .icon,
+.fail .result .re_main .icon {
+  display: block;
+  float: left;
+  width: 130px;
+  height: 130px;
+  background-size: cover;
+  margin-right: 75px;
+}
+.success .result .re_main .icon.su_icon,
+.fail .result .re_main .icon.su_icon {
+  background-image: url(../imgs/success.png);
+}
+.success .result .re_main .icon.fa_icon,
+.fail .result .re_main .icon.fa_icon {
+  background-image: url(../imgs/fail.png);
+}
+.success .result .re_main .su_right .rp1,
+.fail .result .re_main .su_right .rp1 {
+  font-size: 30px;
+  color: #2693d4;
+  margin-bottom: 20px;
+}
+.success .result .re_main .su_right .rp2,
+.fail .result .re_main .su_right .rp2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.success .result .re_main .su_right .rp2 span,
+.fail .result .re_main .su_right .rp2 span {
+  font-size: 18px;
+}
+.success .result .re_main .su_right .rp2 a,
+.fail .result .re_main .su_right .rp2 a {
+  display: inline-block;
+  width: 121px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #2693d4;
+  border-radius: 5px;
+  border: solid 1px #2693d4;
+}
+.success .result .re_main .su_right .rp3,
+.fail .result .re_main .su_right .rp3 {
+  font-size: 14px;
+}
+.success .result .re_main .su_right .rp3 span,
+.fail .result .re_main .su_right .rp3 span {
+  font-size: 18px;
+}
+.success .result .re_main .su_right .rp4,
+.fail .result .re_main .su_right .rp4 {
+  font-size: 30px;
+  color: #e64340;
+  margin-bottom: 20px;
+}
