@@ -15,7 +15,7 @@
 		<div class="search clear">
 			<div class="logo" onclick="goIndex()"></div>
 			<div class="welcome">
-				欢迎注册
+				找回密码
 			</div>
 		</div>
 	</div>
@@ -25,15 +25,15 @@
 			<p><input type="text" placeholder="请输入手机号"></p>
 			<p>
 				<input type="text"  placeholder="请输入验证码" class="short">
-				<span class="yz_pic"></span>
+				<img  class="yz_pic" src="/xinda-api/ajaxAuthcode">
 			</p>
 			<p>
 				<input type="text"  placeholder="请输入短信验证码" class="short">
 				<button class="clickget">点击获取</button>
 			</p>
-			<p><input type="text"  placeholder="请输入新密码"></p>
-			<p><input type="text"  placeholder="请再次确认密码"></p>
-			<p><button>确认修改</button></p>
+			<p><input type="password"  placeholder="请输入新密码"></p>
+			<p><input type="password"  placeholder="请再次确认密码"></p>
+			<p><button id="confirm">确认修改</button></p>
 			
 		</div>
 		<div class="line"></div>
@@ -51,6 +51,6 @@
 	</div>
     </div>
 </body>
-	<script id="mainScript" src="../js/require.js" data-main="../js/src/index"></script>
+	<script id="mainScript" src="../js/require.js" data-main="../js/src/forget"></script>
 	<script src="../js/config.js"></script>
 </html>

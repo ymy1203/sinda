@@ -5,15 +5,26 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>信达-注册</title>
 	<link rel="stylesheet" href="../css/lorefo.css"/>
+<!-- 	<script  src="../js/jquery.min.js"></script> -->
 </head>
 <body>
-<!-- 头部 -->
-<div id="app">
-    <vue-header></vue-header>
+	<!-- 头部 -->
+	<div class="header">
+		<div class="content">
+			<span>欢迎来到信达！</span>
+			<a href="login.html">登录</a>
+			<a href="register.html">快速注册</a>
+			<div class="f-r">
+				<span class="cart f-l"></span>
+				<span>购物车<span class="cart_num">0</span>件</span>
+				<span class="col_b fws">服务商入口</span>
+			</div>
+		</div>
+	</div>
 	<!-- logo和搜索框 -->
-	<div class="bg_w">
+	<div  class="bg_w">
 		<div class="search clear">
-			<div class="logo" onclick="goIndex()"></div>
+			<div class="logo"></div>
 			<div class="welcome">
 				欢迎注册
 			</div>
@@ -25,22 +36,41 @@
 			<p><input type="text" placeholder="请输入手机号"></p>
 			<p>
 				<input type="text"  placeholder="请输入验证码" class="short">
-				<span class="yz_pic"></span>
+				<!-- <span class="yz_pic"></span> -->
+				<img  class="yz_pic" src="/xinda-api/ajaxAuthcode">
 			</p>
 			<p>
 				<input type="text"  placeholder="请输入短信验证码" class="short">
 				<button class="clickget">点击获取</button>
 			</p>
+			<!-- <p class="mb10" data-toggle="distpicker">
+        <span class="new-title">省：<i>*</i></span>
+        <select  class="w140">
+          
+        <lect>
+        <label class="dt">市：</label>
+        <select class="w100">
+          
+        <lect>
+        <label class="dt">区：</label>
+        <select class="w100">
+         
+        <lect>
+      </p>
+/// -->
 			<p data-toggle="distpicker">
-				<select>
+				<select id="pro">
+					<!-- <option>省</option> -->
 				</select>
-				<select class="mar">
+				<select id="city">
+					<!-- <option>市</option> -->
 				</select>
-				<select>
+				<select id="area">
+					<!-- <option>区</option> -->
 				</select>
 			</p>
-			<p><input type="text"  placeholder="请设置密码"></p>
-			<p><button>立即注册</button></p>
+			<p><input type="password"  placeholder="请设置密码"></p>
+			<p><button id="submit">立即注册</button></p>
 			<p class="notice">注册即同意遵守<span class="col_b">《服务协议》</span></p>
 		</div>
 		<div class="line"></div>
@@ -50,14 +80,12 @@
 			<span class="people"></span>
 		</div>
 	</div>
-	<!--关于我们 脚部 -->
-	<!-- <vue-footer></vue-footer> -->
 	<!-- 脚部 -->
 	<div class="footer">
 		©Copyright 2016北京信达科技有限公司  京ICP备  16011621号
 	</div>
-    </div>
 </body>
-	<script id="mainScript" src="../js/require.js" data-main="../js/src/register"></script>
+<script id="mainScript" src="../js/require.js" data-main="../js/src/register"></script>
 	<script src="../js/config.js"></script>
 </html>
+

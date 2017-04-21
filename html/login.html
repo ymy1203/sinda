@@ -5,15 +5,26 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>信达-登录</title>
 	<link rel="stylesheet" href="../css/lorefo.css"/>
+	<!-- <script  src="../js/jquery.min.js"></script> -->
 </head>
 <body>
-<!-- 头部 -->
-<div id="app">
-    <vue-header></vue-header>
+	<!-- 头部 -->
+	<div class="header">
+		<div class="content">
+			<span>欢迎来到信达！</span>
+			<a href="login.html">登录</a>
+			<a href="register.html">快速注册</a>
+			<div class="f-r">
+				<span class="cart f-l"></span>
+				<span>购物车<span class="cart_num">0</span>件</span>
+				<span class="col_b fws">服务商入口</span>
+			</div>
+		</div>
+	</div>
 	<!-- logo和搜索框 -->
 	<div class="bg_w">
 		<div class="search clear">
-			<div class="logo" onclick="goIndex()"></div>
+			<div class="logo"></div>
 			<div class="welcome">
 				欢迎登录
 			</div>
@@ -23,13 +34,14 @@
 	<div class="login">
 		<div class="submit">
 			<p><input type="text" placeholder="请输入用户名/手机号"></p>
-			<p><input type="text"  placeholder="请输入密码"></p>
+			<p><input type="password"  placeholder="请输入密码"></p>
 			<p>
 				<input type="text"  placeholder="请输入验证码" class="short">
-				<span class="yz_pic"></span>
+				<!-- l<span class="yz_pic"></span> -->
+				<img  class="yz_pic" src="/xinda-api/ajaxAuthcode">
 			</p>
 			<p class="notice "><a href="forget.html" class="col_b f-r">忘记密码？</a></p>
-			<p><button>立即登录</button></p>
+			<p><button id="login">立即登录</button></p>
 			
 		</div>
 		<div class="line"></div>
@@ -40,13 +52,10 @@
 		</div>
 	</div>
 	<!-- 脚部 -->
-	<!-- <vue-footer></vue-footer> -->
-	<!-- 脚部 -->
 	<div class="footer">
 		©Copyright 2016北京信达科技有限公司  京ICP备  16011621号
 	</div>
-</div>
 </body>
-	<script id="mainScript" src="../js/require.js" data-main="../js/src/index"></script>
+<script id="mainScript" src="../js/require.js" data-main="../js/src/login"></script>
 	<script src="../js/config.js"></script>
 </html>
