@@ -127,7 +127,6 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         	}
         },
         mounted:function() {
-
         	//判断是财务税收还是公司工商
         	if(sessionStorage.gs=="公司工商"){
         		$(".money").removeClass("bor_b");
@@ -140,6 +139,7 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         		//改变DOM元素
         		this.vforVif = 1;
         	};
+            // console.log($("#welcome"));
         }
     })
 })

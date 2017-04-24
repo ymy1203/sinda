@@ -1,7 +1,7 @@
 //这是头部登录注册模块
-define(['vue','jquery'],function(Vue){
-	const header = Vue.extend({
-		template:'	<!-- 头部 -->\
+define(['vue', 'jquery'], function(Vue, $) {
+    const header = Vue.extend({
+        template: '	<!-- 头部 -->\
 					<div class="header">\
 						<div class="content">\
 							<span id="welcome" >欢迎来到信达！</span>\
@@ -15,104 +15,99 @@ define(['vue','jquery'],function(Vue){
 						</div>\
 					</div>\
 				',
-	created(){
-		this.login();
-		// this.abd();
-	},
-	data(){
-		return{
-						
-		}
-	},
-	methods:{
-		login(){
-			console.log("headerJS");
-	        var welEle=$("#welcome");
-	        var loginBtn=$("#login_a");
-	        var registerBtn=$("#register_a");
-	        var cartNum=$(".cart_num");
-	        var loginStatus=0;
-	        //登陆状态：用户显示于header
-	        $.ajax({
-	            type: "post",
-	            url: "http://115.182.107.203:8088/xinda/xinda-api/sso/login-info",
-	            data: {
-	            },
-	            dataType: "json",
-	            async: false,
-	            success: function(data, textStatus) {
-	                if (data.status==1){
-	                    loginStatus=1;
-	                    welEle[0].innerHTML="欢迎,"+data.data.name;
-	                    $("<a id='login_quit' href='javascript:void(0)'>退出登录</a>")
-	                        .insertAfter(loginBtn);
-	                    var quitBtn=$('#login_quit');
-	                     //退出登陆
-	                    quitBtn.click(function(){
-	                        $.ajax({
-	                            type: "post",
-	                            url: "http://115.182.107.203:8088/xinda/xinda-api/sso/ logout",
-	                            data: {
-	                            },
-	                            dataType: "json",
-	                            success: function(data, textStatus) {
-	                                if (data.status==1){
-	                                    location.href="index.html";
-	                                }
-	                                console.log(data); 
-	                                        
-	                            },
-	                            error: function(xhr, textStatus) {
-	                                console.log(xhr.readyState);
-	                                console.log(textStatus);
-	                            }
-	                        });
-	                    });
-	                    registerBtn.css("display","none");
-	                    loginBtn.css("display","none");
-	                }
-	                console.log(data); 
-	                        
-	            },
-	            error: function(xhr, textStatus) {
-	                console.log(xhr.readyState);
-	                console.log(textStatus);
-	            }
-	        });
-	        //登陆状态：购物车数量
-	        console.log(loginStatus);
-	        if(loginStatus==1){
-	            $.ajax({
-	                type: "post",
-	                url: "http://115.182.107.203:8088/xinda/xinda-api/cart/cart-num",
-	                data: {
-	                },
-	                dataType: "json",
-	                success: function(data, textStatus) {
-	                    if (data.status==1){
-	                       cartNum[0].innerHTML=data.data.cartNum;
-	                       $(".fws")[0].innerHTML="会员中心";
-	                       $(".fws").click(function(){
-	                            location.href="html/member.html";
-	                       });  
-	                    }
-	                    console.log(data);        
-	                },
-	                error: function(xhr, textStatus) {
-	                    console.log(xhr.readyState);
-	                    console.log(textStatus);
-	                }
-	            });
-	        }  
-	    },
-	},
-	mounted: function(){
-		// console.log("headerJS");
-	}
+        created() {
 
 
-})
-	
-	//绑定
-	Vue.component('vue-header',header);
+        },
+        data() {
+            return {
+
+            }
+        },
+        methods: {
+            login() {
+                var welEle = $("#welcome");
+                var loginBtn = $("#login_a");
+                var registerBtn = $("#register_a");
+                var cartNum = $(".cart_num");
+                var loginStatus = 0;
+                //登陆状态：用户显示于header
+                $.ajax({
+                    type: "post",
+                    url: "/xinda-api/sso/login-info",
+                    data: {},
+                    dataType: "json",
+                    async: false,
+                    success: function(data, textStatus) {
+                        if (data.status == 1) {
+                            loginStatus = 1;
+                            welEle[0].innerHTML="欢迎,"+data.data.name;
+                            $("<a id='login_quit' href='javascript:void(0)'>退出登录</a>")
+                                .insertAfter(loginBtn);
+                            var quitBtn = $('#login_quit');
+                            //退出登陆
+                            quitBtn.click(function() {
+                                $.ajax({
+                                    type: "post",
+                                    url: "/xinda-api/sso/ logout",
+                                    data: {},
+                                    dataType: "json",
+                                    success: function(data, textStatus) {
+                                        if (data.status == 1) {
+                                            location.href = "index.html";
+                                        }
+                                        console.log(data);
+
+                                    },
+                                    error: function(xhr, textStatus) {
+                                        console.log(xhr.readyState);
+                                        console.log(textStatus);
+                                    }
+                                });
+                            });
+                            registerBtn.css("display", "none");
+                            loginBtn.css("display", "none");
+                        }
+                        console.log(data);
+
+                    },
+                    error: function(xhr, textStatus) {
+                        console.log(xhr.readyState);
+                        console.log(textStatus);
+                    }
+                });
+                //登陆状态：购物车数量
+                console.log(loginStatus);
+                if (loginStatus == 1) {
+                    $.ajax({
+                        type: "post",
+                        url: "/xinda-api/cart/cart-num",
+                        data: {},
+                        dataType: "json",
+                        success: function(data, textStatus) {
+                            if (data.status == 1) {
+                                cartNum[0].innerHTML=data.data.cartNum;
+                                $(".fws")[0].innerHTML = "会员中心";
+                                $(".fws").click(function() {
+                                    location.href = "html/member.html";
+                                });
+                            }
+                            console.log(data);
+                        },
+                        error: function(xhr, textStatus) {
+                            console.log(xhr.readyState);
+                            console.log(textStatus);
+                        }
+                    });
+                }
+            }
+        },
+        mounted: function() {
+        	this.login();
+        }
+    })
+    $();
+
+    //绑定
+    Vue.component('vue-header', header);
 })
