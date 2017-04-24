@@ -9,14 +9,16 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 				fuwu:'',
 				fuwu_product:'',
 				fuwu_provider:'',
+				//商品ID
+				goodsID:sessionStorage.goodsID,
 			}
 		},
 		mounted(){
 			$(".allCP").css("color","#2693d4");
-			// console.log("aa");
+			// console.log(sessionStorage.goodsID);
 		},
 		methods:{
-			getData:function (){
+			getData:function (id){
 				var that = this;
 				$.ajax({
 					type: "post",

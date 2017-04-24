@@ -84,6 +84,13 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue) {
             		sessionStorage.aa_value = $("#cp_input").val();
             	}
             	location.href="html/shop_list.html";
+            },
+            //跳转的是公司工商还是财税服务
+            goGongshang(){
+                sessionStorage.gs = "公司工商";
+            },
+            goCS(){
+                sessionStorage.gs = "财税服务";
             }
         },
         mounted: function() {
