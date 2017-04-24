@@ -7,7 +7,13 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 		data(){
 			return{
 				fuwu:'',
+				fuwu_product:'',
+				fuwu_provider:'',
 			}
+		},
+		mounted(){
+			$(".allCP").css("color","#2693d4");
+			// console.log("aa");
 		},
 		methods:{
 			getData:function (){
@@ -22,14 +28,12 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
                     success: function(data) {
                     	//处理返回数据----0级；
                     	that.fuwu  = data.data;
-                        console.log(data.data);
+                    	that.fuwu_product = data.data.product;
+                    	that.fuwu_provider = data.data.providerProduct;
+                        // console.log(data.data);
                     }
 				})
 			}
-		},
-		mounted(){
-			$(".allCP").css("color","#2693d4");
 		}
-
 	})
 })

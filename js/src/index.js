@@ -99,7 +99,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue) {
         //登陆状态：用户显示于header
         $.ajax({
             type: "post",
-             url: "/xinda-api/sso/login-info",
+             url: "http://115.182.107.203:8088/xinda/xinda-api/sso/login-info",
             data: {
             },
             dataType: "json",
@@ -115,7 +115,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue) {
                     quitBtn.click(function(){
                         $.ajax({
                             type: "post",
-                             url: "/xinda-api/sso/ logout",
+                            url: "http://115.182.107.203:8088/xinda//xinda-api/sso/ logout",
                             data: {
                             },
                             dataType: "json",
@@ -148,7 +148,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue) {
         if(loginStatus==1){
             $.ajax({
                 type: "post",
-                 url: "/xinda-api/cart/cart-num",
+                 url: "http://115.182.107.203:8088/xinda/xinda-api/cart/cart-num",
                 data: {
                 },
                 dataType: "json",
