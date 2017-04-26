@@ -61,7 +61,7 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
 	                    },
 	                    dataType: "json",
 	                    success: function(data) {
-	                    	// console.log(data);
+	                    	console.log(data);
 	                    	that.product = data;
 	                    }
         			})
@@ -122,12 +122,12 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         		this.spanKey2 = index;
         	},
         	//跳转商品详情页
-        	goShopDetil(){
+        	goShopDetil(id){
+                sessionStorage.goodsID = id;
         		location.href = "wares.html"
         	}
         },
         mounted:function() {
-
         	//判断是财务税收还是公司工商
         	if(sessionStorage.gs=="公司工商"){
         		$(".money").removeClass("bor_b");
@@ -140,6 +140,7 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         		//改变DOM元素
         		this.vforVif = 1;
         	};
+            // console.log($("#welcome"));
         }
     })
 })

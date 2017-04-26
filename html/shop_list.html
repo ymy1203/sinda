@@ -72,7 +72,10 @@
 					</div>
 					<div class="shop_right">
 						<p>￥{{(item.price/100).toFixed(2)}}</p>
-						<p><span @click="goShopDetil">立即购买</span><span>加入购物车</span></p>
+						<p>
+							<span @click="goShopDetil(item.id)">立即购买</span>
+							<span>加入购物车</span>
+						</p>
 					</div>
 				</li>
 			</ul>	

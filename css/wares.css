@@ -369,6 +369,9 @@ li {
   color: #666;
   margin: 38px 0 70px 0;
 }
+.wares .fwnr .order li {
+  cursor: pointer;
+}
 .wares .fwnr .main {
   border: solid 1px #ddd;
   border-top: none;
