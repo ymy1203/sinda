@@ -18,18 +18,21 @@
 			<p class="title_r">订单详情</p>
 			<ul class="or_li">
 				<li class="li1">
-					<div>订单编号：<span>S6272827272727211</span></div>
+					<div class="order-num">订单编号：<span>S6272827272727211</span></div>
 					<div>创建时间：2017-07-01 01：12：21</div>
 					<div class="mar_no">订单金额：￥2000.00元
-					<span class="span_red">订单明细&nbsp;<span class="sanjiao"></span></span></div>
+						<span class="span_red" @click="yincang()">订单明细&nbsp;
+							<span class="sanjiao"></span>
+						</span>
+					</div>
 				</li>
-				<li class="li2">
+				<li class="li2" v-if="hiden">
 					<div>服务名称：注册分公司</div>
 					<div>单价：<span>￥800.00元</span> </div>
 					<div>数量：<span>1</span></div>
 					<div class="mar_no">服务总额：<span>￥800.00元</span></div>
 				</li>
-				<li class="li2">
+				<li class="li2" v-if="hiden">
 					<div>服务名称：注册分公司</div>
 					<div>单价：<span>￥800.00元</span> </div>
 					<div>数量：<span>1</span></div>
@@ -41,26 +44,26 @@
 			<p class="title_r">支付方式</p>
 			<div class="type">
 				<p>非网银支付</p>
-				<div class="clear box">
-					<input type="radio" name="pay_platform" class="f-l">
+				<div class="clear box" @click="paystyle(1)">
+					<input type="radio" name="boxes" class="f-l" value="1" >
 					<div class="bank"></div>
 				</div>
 				<p>平台支付</p>
 				<ul>
-					<li class="box">
-						<input type="radio" name="pay_platform" class="f-l">
+					<li class="box" @click="paystyle(2)">
+						<input type="radio" name="boxes" class="f-l" value="2">
 						<div class="weixin"></div>
 						<div class="wxpay">微信支付</div>
 					</li>
-					<li class="box">
-						<input type="radio" name="pay_platform" class="f-l">
+					<li class="box" @click="paystyle(3)">
+						<input type="radio" name="boxes" class="f-l" value="3">
 						<div class="zfb"></div>
 						<div class="wxpay">支付宝支付</div>
 					</li>
 				</ul>
 				<p>自助转账<span>因限额不能支付时，建议使用自助转</span></p>
-				<div class="zs_bank">
-					<input type="radio" name="pay_platform" class="f-l">
+				<div class="zs_bank" @click="paystyle(4)">
+					<input type="radio" name="boxes" class="f-l" value="4">
 					<div class="zhaoshang"></div>
 					<div class="f-l ps">
 						<p>开户账号：<span>110916853310605</span></p>
@@ -80,6 +83,7 @@
 	<vue-footer></vue-footer>
     </div>
 </body>
-	<script id="mainScript" src="../js/require.js" data-main="../js/src/index"></script>
+	<script id="mainScript" src="../js/require.js" data-main="../js/src/order"></script>
 	<script src="../js/config.js"></script>
+	<!-- <script src="../js/src/order.js"></script> -->
 </html>
