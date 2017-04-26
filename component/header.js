@@ -89,7 +89,7 @@ define(['vue', 'jquery'], function(Vue, $) {
                                 cartNum[0].innerHTML=data.data.cartNum;
                                 $(".fws")[0].innerHTML = "会员中心";
                                 $(".fws").click(function() {
-                                    location.href = "html/member.html";
+                                    location.href = "member.html";
                                 });
                             }
                             // console.log(data);
