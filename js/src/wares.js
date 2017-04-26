@@ -14,6 +14,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 				goodsID:sessionStorage.goodsID,
 				//服务内容|商品评价的显示吟唱
 				or_show:true,
+				// bg_b:'bg_b',
 			}
 		},
 		mounted(){

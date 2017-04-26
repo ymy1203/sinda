@@ -119,7 +119,8 @@
             <ul>
                 <!-- vue :v-for循环 -->
                 <li v-for="item in starTeams.product">
-                    <div class="icon"></div>
+                    <!-- <div class="icon" :style = "'background-image:url(http://115.182.107.203:8088/xinda/pic/'+item.providerImg+');'"></div> -->
+                    <img :src="'http://115.182.107.203:8088/xinda/pic/'+item.providerImg">
                     <p class="p4">{{item.providerName}}</p>
                     <h3>{{item.serviceName}}</h3>
                     <p class="p5">{{item.serviceInfo}}</p>

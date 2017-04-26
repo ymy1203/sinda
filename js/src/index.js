@@ -42,6 +42,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue) {
                     dataType: "json",
                     success: function(data) {
                         var data = data.data;
+                        console.log(data);
                         that.starTeams = data;
                         // console.log(typeof data.product[0].price);
                     }
@@ -130,28 +131,28 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue) {
                                 if (data.status==1){
                                     location.href="index.html";
                                 }
-                                console.log(data); 
+                                // console.log(data); 
                                         
                             },
                             error: function(xhr, textStatus) {
-                                console.log(xhr.readyState);
-                                console.log(textStatus);
+                                // console.log(xhr.readyState);
+                                // console.log(textStatus);
                             }
                         });
                     });
                     registerBtn.css("display","none");
                     loginBtn.css("display","none");
                 }
-                console.log(data); 
+                // console.log(data); 
                         
             },
             error: function(xhr, textStatus) {
-                console.log(xhr.readyState);
-                console.log(textStatus);
+                // console.log(xhr.readyState);
+                // console.log(textStatus);
             }
         });
         //登陆状态：购物车数量
-        console.log(loginStatus);
+        // console.log(loginStatus);
         if(loginStatus==1){
             $.ajax({
                 type: "post",
@@ -167,11 +168,11 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue) {
                             location.href="html/member.html";
                        });  
                     }
-                    console.log(data);        
+                    // console.log(data);        
                 },
                 error: function(xhr, textStatus) {
-                    console.log(xhr.readyState);
-                    console.log(textStatus);
+                    // console.log(xhr.readyState);
+                    // console.log(textStatus);
                 }
             });
         }  
