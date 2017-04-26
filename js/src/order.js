@@ -21,7 +21,7 @@ require(['vue','jquery','header','headerlogo','footer'],function (Vue,header,hea
 					type:"post",
 					url:"http://115.182.107.203:8088/xinda/xinda-api/business-order/detail",
 					data:{
-						
+						businessNo:"S1704040001075133085",
 					},
 					dataType:"json",
 					success:function(data,textStatus){
@@ -44,10 +44,14 @@ require(['vue','jquery','header','headerlogo','footer'],function (Vue,header,hea
 					$(".sanjiao").css({"transform":"rotate(180deg)","transition":"transform 0.5s"});
 				}
 			},
-			paytype:function(){
-				var box = $(".boxes");
-				this.box.attr("checked",true);
+			paystyle:function(m){
+				console.log(m);
+				// if(m==1){
+				// 	location.href=""
+				// }
+				// var paytype=$(this)
 			}
+
 		},
 	})
 })
