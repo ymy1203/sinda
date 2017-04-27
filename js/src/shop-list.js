@@ -40,6 +40,7 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
 			            dataType: "json",
 			            success: function(data) {
 			            //处理返回数据----0级；
+
 			            	var data0 = data.data;
 			            	that.producType = data0;
 		                }
@@ -125,7 +126,66 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         	goShopDetil(id){
                 sessionStorage.goodsID = id;
         		location.href = "wares.html"
-        	}
+        	},
+            addCart(id){
+                var theId=id;
+                $.ajax({
+                    type: "post",
+                    url: "/xinda-api/cart/add",
+                    async: false,
+                    data: {
+                        id:theId,
+                        num:1         
+                    },
+                    dataType: "json",
+                    success: function(data, textStatus) {
+                        console.log(data); //未登录
+                    },
+                    error: function(xhr, textStatus) {
+                        console.log(xhr.readyState);
+                        console.log(textStatus);
+                    }
+                });
+                 var loginStatus = 0;
+                //修改头部购物车数量
+                $.ajax({
+                    type: "post",
+                    url: "/xinda-api/sso/login-info",
+                    data: {},
+                    dataType: "json",
+                    async: false,
+                    success: function(data, textStatus) {
+                        if (data.status == 1)loginStatus = 1; 
+                            
+                    },
+                    error: function(xhr, textStatus) {
+                                        // console.log(xhr.readyState);
+                                        // console.log(textStatus);
+                    }
+                });
+                if (loginStatus == 1) {
+                    $.ajax({
+                        type: "post",
+                        url: "/xinda-api/cart/cart-num",
+                        data: {},
+                        dataType: "json",
+                        async: false,
+                        success: function(data, textStatus) {
+
+                            if (data.status == 1) {
+                                console.log(data.data.cartNum);
+                               $(".cart_num")[0].innerHTML=data.data.cartNum;
+                                
+                            }
+                            // console.log(data);
+                        },
+                        error: function(xhr, textStatus) {
+                            // console.log(xhr.readyState);
+                            // console.log(textStatus);
+                        }
+                    });
+                }
+            }
         },
         mounted:function() {
         	//判断是财务税收还是公司工商
@@ -144,3 +204,5 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         }
     })
 })
+
+
