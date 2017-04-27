@@ -90,11 +90,14 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 				location.href="shoppingcart.html"
 			},
 			addCart(){
+				var theId=this.goodsID;
+				var theNum=this.num;
 				$.ajax({
 		            type: "post",
-		            url: "/xinda-api/cart/list",
+		            url: "/xinda-api/cart/add",
 		            data: {
-		      		
+		               	id:theId,
+						num:theNum			
 		            },
 		            dataType: "json",
 		            success: function(data, textStatus) {
@@ -114,11 +117,16 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 			subNum(){
 				this.num--;
 				if(this.num<=0){
-					this.num=0;
+					this.num=1;
 				}
 			},
 			inputBlur(){
-				this.num = $("#inNum").val();
+				var numval = $("#inNum").val();
+				if(/\d/.test(numval)){
+					this.num = numval;
+				}else{
+					this.num = 1;
+				}
 			}
 		}
 	})
