@@ -57,7 +57,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
                     }
 				})
 			},
-			//立即购买加入购物车页签切换
+			//服务内容，商品评价页签切换
 			surInfo(bool){
 				if(bool){
 					this.or_show = true;
