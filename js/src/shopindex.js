@@ -12,6 +12,5 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 		mothods:{
 
 		},
-
 	})
 })
