@@ -203,15 +203,15 @@ li {
   float: left;
   width: 41px;
   height: 41px;
-  background-image: url(../imgs/shoplogo.jpg);
-  background-size: cover;
+  // background-image: url(../imgs/shoplogo.jpg);
+  // background-size: cover;
   margin-right: 200px;
 }
 .shoppingcart .cart .cartlist span {
   float: left;
   display: block;
-  width: 80px;
-  margin-right: 125px;
+  width: 160px;
+  margin-right: 45px;
 }
 .shoppingcart .cart .cartlist span.mar_no {
   width: 50px!important;

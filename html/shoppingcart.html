@@ -24,32 +24,32 @@
 				<span>金额</span>
 				<span class="mar_no">操作</span>
 			</p>
-			<p>店铺：信达北京服务中心</p>
+			<p v-for="item in list">店铺：{{item.providerName}}</p>
 			<div class="cartaddhere">
-				<div class="cartlist">
-					<div class="cart_logo"></div>
-					<span>注册分公司</span>
-					<span>￥800</span>
+				<div class="cartlist" v-for="item in list">
+					<div class="cart_logo"><img :src="item.providerImg"></div>
+					<span>{{item.serviceName}}</span>
+					<span>￥{{item.unitPrice}}</span>
 					<div class="addorreduce">
-						<span @click="addNum()">+</span>
+						<span @click="addNum(item)">+</span>
 						<input id="inNum" type="text" :value="num" @blur="inputBlur">
-						<span @click="subNum()">-</span>
+						<span @click="subNum(item)">-</span>
 					</div>
 					<span class="col_b">￥{{total}}</span>
 					<span class="mar_no" @click="delate">删除</span>
 				</div>
-				<div class="cartlist">
+				<!-- <div class="cartlist">
 					<div class="cart_logo"></div>
 					<span>注册分公司</span>
 					<span>￥800</span>
 					<div class="addorreduce">
-						<span @click="addNum()">+</span>
+						<span @click="addNum">+</span>
 						<input id="inNum" type="text" :value="num" @blur="inputBlur">
-						<span @click="subNum()">-</span>
+						<span @click="subNum">-</span>
 					</div>
 					<span class="col_b">￥{{total}}</span>
 					<span class="mar_no" @click="delate">删除</span>
-				</div>
+				</div> -->
 			</div>
 			<p class="total">金额总计&nbsp;<span class="font_b">￥800.00</span></p>
 			<p class="calculate">
