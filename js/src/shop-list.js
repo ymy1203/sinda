@@ -5,6 +5,7 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         created() {
             this.search(this.val,this.page_n);
             this.csorgs();
+            // this.val=='财务税收'?this.vShow = true:this.vShow=false;
         },
         data(){
         	return{
@@ -26,7 +27,10 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         		//服务分类默认背景颜色为第一个
         		spanKey:0,
         		spanKey2:0,
-        		//
+        		//显示隐藏
+                vShow:true,
+                //公司工商的AJAX数据
+                gsgs:'',
         	}
         },
         methods:{
@@ -67,19 +71,21 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
 	                    }
         			})
 	        	}else{
-	        		//公司工商页面接口用错了，等着改
+	        		//公司工商页面接口
 	        		$.ajax({
         				type: "post",
-	                    url: "http://115.182.107.203:8088/xinda/xinda-api/provider/search-grid",
+	                    url: "http://115.182.107.203:8088/xinda/xinda-api/product/package/grid",
 	                    data: {
 	                    	start:n,
 	                    	limit:8,
-	                    	searchName:val,
-	                    	sort:''
+	                    	productTypeCode: "1",
+                            productId: "8a82f52b674543e298d2e5f685946e6e",
+	                    	sort:'2'
 	                    },
 	                    dataType: "json",
 	                    success: function(data) {
-	                    	console.log(data);
+                            that.gsgs = data.data; 
+	                    	console.log(that.gsgs);
 	                    	// that.product = data;
 	                    }
         			})
@@ -194,11 +200,13 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         		$(".company").addClass("bor_b");
         		//改变DOM元素
         		this.vforVif = 2;
+                this.vShow = false;
         	}else if(sessionStorage.gs=="财税服务"){
         		$(".money").addClass("bor_b");
         		$(".company").removeClass("bor_b");
         		//改变DOM元素
         		this.vforVif = 1;
+                this.vShow = true;
         	};
             // console.log($("#welcome"));
         }
