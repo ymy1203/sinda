@@ -34,6 +34,7 @@ li {
 }
 .bor_b {
   border-bottom: solid 3px #2693d4;
+  color: #2693d4;
 }
 .title {
   line-height: 20px;
@@ -60,7 +61,6 @@ li {
   margin-top: 10px;
 }
 .header .cart_num {
-  color: #2693d4;
   line-height: 35px;
 }
 .header .fws {
@@ -83,6 +83,7 @@ li {
   background-image: url(../imgs/logo.jpg);
   background-size: cover;
   float: left;
+  cursor: pointer;
 }
 .search .city {
   width: 120px;
@@ -96,6 +97,7 @@ li {
 }
 .search .input span {
   margin: 0 5px;
+  cursor: pointer;
 }
 .search .input input {
   float: left;
@@ -180,6 +182,8 @@ li {
   height: 35px;
   line-height: 35px;
   border: solid 1px #666;
+  margin-right: 10px;
+  cursor: pointer;
 }
 .page .up,
 .page .down {
@@ -194,165 +198,171 @@ li {
   width: 52px;
   color: #666;
 }
-.wares {
-  width: 1200px;
-  margin: 0 auto;
-  margin-top: 10px;
+.shop .title {
+  line-height: 20px;
+  margin: 20px 0 5px 0;
+  font-size: 14px;
 }
-.wares .top {
+.shop .main {
+  margin-bottom: 65px;
   overflow: hidden;
-  height: 180px;
   width: 100%;
+  height: 280px;
   border: solid 1px #ddd;
-  margin-bottom: 23px;
+  border-top: none;
 }
-.wares .top span {
+.shop .main li {
   float: left;
-  display: block;
-  width: 79px;
-  height: 86px;
-  margin: 40px 30px 0 64px;
-  background-size: cover;
-  background-image: url(../imgs/shoplogo.jpg);
-}
-.wares .top div {
-  float: left;
-}
-.wares .top div h2 {
-  font-size: 34px;
-  margin: 45px 0 10px 0;
-}
-.wares .bottom {
-  overflow: hidden;
-}
-.wares .bottom .com_intro {
-  float: left;
-  width: 298px;
-  height: 580px;
+  width: 570px;
+  height: 252px;
   border: solid 1px #ddd;
-  margin-right: 25px;
+  margin: 12px 14px;
 }
-.wares .bottom .com_intro .com_top {
-  height: 330px;
-  width: 100%;
-  border-bottom: solid 1px #ddd;
-}
-.wares .bottom .com_intro .com_top p {
-  width: 250px;
-  line-height: 30px;
-  margin: 0 auto;
-}
-.wares .bottom .com_intro .com_top p.com_title {
-  font-size: 24px;
-  line-height: 50px;
-  padding-left: 10px;
-  margin: 0 0 20px 0;
-}
-.wares .bottom .com_intro ul {
-  width: 100%;
-  padding: 0 15px;
-}
-.wares .bottom .com_intro ul li {
-  float: left;
-  width: 135px;
-  height: 120px;
-}
-.wares .bottom .com_intro ul li span {
-  display: block;
+.shop .main li .xinda .logo {
+  width: 126px;
+  height: 58px;
+  background-image: url(../imgs/logo.jpg);
   background-size: cover;
-  margin: 20px auto 10px auto;
+  margin: 75px 45px 58px 35px;
 }
-.wares .bottom .com_intro ul li span.com_icon1 {
-  width: 42px;
-  height: 50px;
-  background-image: url(../imgs/bao.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon2 {
-  width: 46px;
-  height: 48px;
-  background-image: url(../imgs/serve.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon3 {
-  width: 43px;
-  height: 43px;
-  background-image: url(../imgs/du.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon4 {
-  width: 41px;
-  height: 47px;
-  background-image: url(../imgs/money.jpg);
-}
-.wares .bottom .com_intro ul li p {
+.shop .main li .xinda .jpfws {
   text-align: center;
-}
-.wares .bottom .con_right {
-  float: left;
-  width: 875px;
-}
-.wares .bottom .ser_content {
-  width: 873px;
-  border: solid 1px #ddd;
-  margin-bottom: 40px;
-  overflow: hidden;
-}
-.wares .bottom .ser_content .title_r {
-  height: 30px;
   line-height: 30px;
-  border-bottom: solid 2px #ddd;
-  padding-left: 10px;
-  margin-bottom: 20px;
 }
-.wares .bottom .ser_content .title_r span {
+.shop .main li .xinda .jpfws .gold {
   display: inline-block;
-  width: 110px;
+  width: 28px;
+  height: 32px;
+  background-image: url(../imgs/jinpai.jpg);
+  background-size: cover;
+  margin: 0 5px 0 50px;
+}
+.shop .main li .shop_intro {
+  margin-top: 25px;
+  line-height: 25px;
+}
+.shop .main li .shop_intro .xinyu {
+  margin-top: 8px;
+}
+.shop .main li .shop_intro .xinyu span {
+  margin-right: 10px;
+}
+.shop .main li .shop_intro .xinyu .xinyu_iconr {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+  background-size: cover;
+  background-image: url(../imgs/hongzuan.jpg);
+}
+.shop .main li .shop_intro .xinyu .xinyu_iconb {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+  background-size: cover;
+  background-image: url(../imgs/heizuan.jpg);
+}
+.shop .main li .shop_intro .enter {
+  width: 102px;
+  height: 33px;
+  border-radius: 5px;
+  background-color: #ff591b;
   text-align: center;
+  line-height: 33px;
+  color: #fff;
+  margin-top: 40px;
+}
+.shop .main li .shop_intro .blue {
+  margin-top: 5px;
+}
+.shop .main li .shop_intro .blue p {
+  display: inline-block;
+  width: 71px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  color: #fff;
+  background-color: #2693d4;
+  border-radius: 3px;
+}
+.shop .main li .shop_intro .kehu_num {
+  margin-right: 10px;
+}
+.excle {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+.excle tr {
+  height: 20px;
+  line-height: 20px;
+  border: solid 1px #ddd;
+}
+.excle td {
+  border: solid 1px #ddd;
+}
+.excle td.short {
+  width: 100px;
+  text-align: center;
+  font-size: 16px;
+}
+.excle td.long {
+  padding: 10px 20px;
+}
+.excle td select {
+  width: 85px;
+  height: 20px;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  margin-right: 5px;
+  background-color: #f7f7f7;
+}
+.excle td span {
+  margin-right: 20px;
+  display: block;
+  float: left;
   cursor: pointer;
 }
-.wares .bottom .ser_content h2 {
-  font-size: 30px;
-  line-height: 70px;
-  height: 93px;
+.excle td .all {
+  padding: 0 10px;
+  background-color: #2693d4;
+  border-radius: 5px;
+  color: #fff;
   text-align: center;
-  color: #2693d4;
-  border-bottom: solid 1px #ddd;
+  margin-right: 20px;
 }
-.wares .bottom .ser_content .ser_li {
-  border_bottom: solid 1px #ddd;
-  padding: 6px;
-}
-.wares .bottom .ser_content .ser_li li {
-  float: left;
+.order {
+  width: 100%;
+  background-color: #f7F7F7;
+  height: 40px;
+  line-height: 40px;
   border: solid 1px #ddd;
-  margin: 12px;
-  height: 200px;
-  width: 235px;
-  padding: 13px;
 }
-.wares .bottom .ser_content .ser_li li .p_1 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.wares .bottom .ser_content .ser_li li .p_2 {
-  line-height: 27px;
-}
-.wares .bottom .ser_content .ser_li li .charge {
-  font-size: 32px;
-  font-weight: bold;
-  color: #2693d4;
-  letter-spacing: 2px;
+.order li {
+  float: left;
+  width: 100px;
+  height: 40px;
   text-align: center;
+  position: relative;
 }
-.wares .bottom .ser_content .ser_li li .border {
+.order li.colligate {
+  width: 107px;
+  background-color: #2693d4;
+  color: #fff;
+}
+.order li .arr {
+  position: absolute;
+  top: 12px;
+  left: 75px;
+  width: 17px;
+  height: 13px;
   display: block;
-  width: 168px;
-  height: 8px;
-  background-image: url(../imgs/border.png);
+  background-image: url(../imgs/arr.png);
   background-size: cover;
 }
-.wares .bottom .ser_content .ser_li li .yuanjia {
-  text-decoration: line-through;
-}
-.wares .bottom .ser_content .ser_li li .look {
-  margin-left: 30px;
+.guide .content a:nth-child(5) {
+  border-bottom: solid 3px #2693d4;
   color: #2693d4;
 }

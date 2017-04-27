@@ -34,6 +34,7 @@ li {
 }
 .bor_b {
   border-bottom: solid 3px #2693d4;
+  color: #2693d4;
 }
 .title {
   line-height: 20px;
@@ -60,7 +61,6 @@ li {
   margin-top: 10px;
 }
 .header .cart_num {
-  color: #2693d4;
   line-height: 35px;
 }
 .header .fws {
@@ -83,6 +83,7 @@ li {
   background-image: url(../imgs/logo.jpg);
   background-size: cover;
   float: left;
+  cursor: pointer;
 }
 .search .city {
   width: 120px;
@@ -96,6 +97,7 @@ li {
 }
 .search .input span {
   margin: 0 5px;
+  cursor: pointer;
 }
 .search .input input {
   float: left;
@@ -180,6 +182,8 @@ li {
   height: 35px;
   line-height: 35px;
   border: solid 1px #666;
+  margin-right: 10px;
+  cursor: pointer;
 }
 .page .up,
 .page .down {
@@ -291,9 +295,9 @@ li {
 }
 .wares .bottom .ser_content {
   width: 873px;
+  height: 580px;
   border: solid 1px #ddd;
   margin-bottom: 40px;
-  overflow: hidden;
 }
 .wares .bottom .ser_content .title_r {
   height: 30px;
@@ -306,7 +310,6 @@ li {
   display: inline-block;
   width: 110px;
   text-align: center;
-  cursor: pointer;
 }
 .wares .bottom .ser_content h2 {
   font-size: 30px;
@@ -324,7 +327,7 @@ li {
   float: left;
   border: solid 1px #ddd;
   margin: 12px;
-  height: 200px;
+  height: 159px;
   width: 235px;
   padding: 13px;
 }

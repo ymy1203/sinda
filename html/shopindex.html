@@ -16,15 +16,15 @@
 		<div class="top">
 			<span></span>
 			<div>
-				<h2>信达北京服务中心</h2>
-				<p>北京-北京市-朝阳区</p>
+				<h2>{{name}}</h2>
+				<p>{{regionName}}</p>
 			</div>
 		</div>
 		<div class="bottom">
 			<div class="com_intro">
 				<div class="com_top">
 					<p class="com_title">公司介绍</p>
-					<p>为给客户提供更加标准化的体验，信达北京服务中心采用自营模式，打造一站式企业服务平台，帮助企业快速解决发展遇到的问题，提供工商注册，财税服务，知识产权，人事外包，证件办理等全方位企业解决方案，为你的企业发展保驾护航。</p>
+					<p>{{providerInfo}}</p>
 				</div>
 				<ul>
 					<li>
@@ -48,72 +48,28 @@
 			<div class="con_right">
 				<div class="ser_content">
 					<p class="title_r">
-						<span class="cobo_b">服务产品</span>
-						<span>客服</span>
-						<span>资质证书</span>
+						<span :class="index == spanKey3?'cobo_b':''" @click="cobo(index)" v-for="(service,index) in services">{{service}}</span>
 					</p>
 					<h2>服务内容</h2>
-					<ul class="ser_li">
-						<li>
-							<p class="p_1">商标快速注册通道(5个小时...</p>
+					<ul class="ser_li" v-show="yi">
+						<li v-for="product in products">
+							<p class="p_1">{{product.serviceName}}</p>
 							<span class="border"></span>
-							<p class="p_2">工作日内5个小时提交申报，次日拿到销量：</p>
-							<p class="charge">￥&nbsp;1400.00</p>
+							<p class="p_2">{{product.serviceInfo}}</p>
+							<p class="charge">￥&nbsp;{{product.price}}</p>
 							<p>
-								<span class="yuanjia">原价：￥<span>2000.00</span>&nbsp;</span>
+								<span class="yuanjia">原价：￥<span>{{product.marketPrice}}</span>&nbsp;</span>
 								<span class="look">查看详情>></span>
 							</p>
 						</li>
-						<li>
-							<p class="p_1">商标快速注册通道(5个小时...</p>
-							<span class="border"></span>
-							<p class="p_2">工作日内5个小时提交申报，次日拿到销量：</p>
-							<p class="charge">￥&nbsp;1400.00</p>
-							<p>
-								<span class="yuanjia">原价：￥<span>2000.00</span>&nbsp;</span>
-								<span class="look">查看详情>></span>
-							</p>
-						</li>
-						<li>
-							<p class="p_1">商标快速注册通道(5个小时...</p>
-							<span class="border"></span>
-							<p class="p_2">工作日内5个小时提交申报，次日拿到销量：</p>
-							<p class="charge">￥&nbsp;1400.00</p>
-							<p>
-								<span class="yuanjia">原价：￥<span>2000.00</span>&nbsp;</span>
-								<span class="look">查看详情>></span>
-							</p>
-						</li>
-						<li>
-							<p class="p_1">商标快速注册通道(5个小时...</p>
-							<span class="border"></span>
-							<p class="p_2">工作日内5个小时提交申报，次日拿到销量：</p>
-							<p class="charge">￥&nbsp;1400.00</p>
-							<p>
-								<span class="yuanjia">原价：￥<span>2000.00</span>&nbsp;</span>
-								<span class="look">查看详情>></span>
-							</p>
-						</li>
-						<li>
-							<p class="p_1">商标快速注册通道(5个小时...</p>
-							<span class="border"></span>
-							<p class="p_2">工作日内5个小时提交申报，次日拿到销量：</p>
-							<p class="charge">￥&nbsp;1400.00</p>
-							<p>
-								<span class="yuanjia">原价：￥<span>2000.00</span>&nbsp;</span>
-								<span class="look">查看详情>></span>
-							</p>
-						</li>
-						<li>
-							<p class="p_1">商标快速注册通道(5个小时...</p>
-							<span class="border"></span>
-							<p class="p_2">工作日内5个小时提交申报，次日拿到销量：</p>
-							<p class="charge">￥&nbsp;1400.00</p>
-							<p>
-								<span class="yuanjia">原价：￥<span>2000.00</span>&nbsp;</span>
-								<span class="look">查看详情>></span>
-							</p>
-						</li>
+					</ul>
+					<ul class="ser_li" v-show="er">
+						<p>工作时间：{{workTime}}</p>
+						<p class="zixun">qq咨询：{{qq}}</p>
+						<p class="zixun">电话咨询：{{cellphone}}</p>
+					</ul>
+					<ul class="ser_li" v-show="san">
+						<img :src='"http://115.182.107.203:8088/xinda/pic"+businessCertPath' alt="" />
 					</ul>
 				</div>
 				<!-- 上一页下一页 -->
@@ -121,11 +77,6 @@
 						<span class="first">首页</span>
 						<span class="up">上一页</span>
 						<span class="bord">1</span>
-						<span class="bord">2</span>
-						<span class="bord">3</span>
-						<span class="bord">4</span>
-						<span class="bord">...</span>
-						<span class="bord">7</span>
 						<span class="down">下一页</span>
 						<span class="first">尾页</span>
 					</div>

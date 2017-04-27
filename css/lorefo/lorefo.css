@@ -34,6 +34,7 @@ li {
 }
 .bor_b {
   border-bottom: solid 3px #2693d4;
+  color: #2693d4;
 }
 .title {
   line-height: 20px;
@@ -60,7 +61,6 @@ li {
   margin-top: 10px;
 }
 .header .cart_num {
-  color: #2693d4;
   line-height: 35px;
 }
 .header .fws {
@@ -83,6 +83,7 @@ li {
   background-image: url(../imgs/logo.jpg);
   background-size: cover;
   float: left;
+  cursor: pointer;
 }
 .search .city {
   width: 120px;
@@ -96,6 +97,7 @@ li {
 }
 .search .input span {
   margin: 0 5px;
+  cursor: pointer;
 }
 .search .input input {
   float: left;
@@ -180,6 +182,8 @@ li {
   height: 35px;
   line-height: 35px;
   border: solid 1px #666;
+  margin-right: 10px;
+  cursor: pointer;
 }
 .page .up,
 .page .down {
@@ -194,165 +198,108 @@ li {
   width: 52px;
   color: #666;
 }
-.wares {
+.login {
   width: 1200px;
   margin: 0 auto;
-  margin-top: 10px;
+  height: 435px;
+  background-color: #fff;
+  margin: 55px auto 170px auto ;
 }
-.wares .top {
+.login .submit {
+  float: left;
+  width: 285px;
+  margin: 50px 170px 0 150px ;
+}
+.login .submit p {
   overflow: hidden;
-  height: 180px;
-  width: 100%;
-  border: solid 1px #ddd;
-  margin-bottom: 23px;
-}
-.wares .top span {
-  float: left;
-  display: block;
-  width: 79px;
-  height: 86px;
-  margin: 40px 30px 0 64px;
-  background-size: cover;
-  background-image: url(../imgs/shoplogo.jpg);
-}
-.wares .top div {
-  float: left;
-}
-.wares .top div h2 {
-  font-size: 34px;
-  margin: 45px 0 10px 0;
-}
-.wares .bottom {
-  overflow: hidden;
-}
-.wares .bottom .com_intro {
-  float: left;
-  width: 298px;
-  height: 580px;
-  border: solid 1px #ddd;
-  margin-right: 25px;
-}
-.wares .bottom .com_intro .com_top {
-  height: 330px;
-  width: 100%;
-  border-bottom: solid 1px #ddd;
-}
-.wares .bottom .com_intro .com_top p {
-  width: 250px;
-  line-height: 30px;
-  margin: 0 auto;
-}
-.wares .bottom .com_intro .com_top p.com_title {
-  font-size: 24px;
-  line-height: 50px;
-  padding-left: 10px;
-  margin: 0 0 20px 0;
-}
-.wares .bottom .com_intro ul {
-  width: 100%;
-  padding: 0 15px;
-}
-.wares .bottom .com_intro ul li {
-  float: left;
-  width: 135px;
-  height: 120px;
-}
-.wares .bottom .com_intro ul li span {
-  display: block;
-  background-size: cover;
-  margin: 20px auto 10px auto;
-}
-.wares .bottom .com_intro ul li span.com_icon1 {
-  width: 42px;
-  height: 50px;
-  background-image: url(../imgs/bao.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon2 {
-  width: 46px;
-  height: 48px;
-  background-image: url(../imgs/serve.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon3 {
-  width: 43px;
-  height: 43px;
-  background-image: url(../imgs/du.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon4 {
-  width: 41px;
-  height: 47px;
-  background-image: url(../imgs/money.jpg);
-}
-.wares .bottom .com_intro ul li p {
+  margin-bottom: 17px;
   text-align: center;
 }
-.wares .bottom .con_right {
-  float: left;
-  width: 875px;
-}
-.wares .bottom .ser_content {
-  width: 873px;
+.login .submit p input {
+  width: 275px;
+  height: 34px;
   border: solid 1px #ddd;
-  margin-bottom: 40px;
-  overflow: hidden;
+  border-radius: 3px;
+  padding-left: 5px;
 }
-.wares .bottom .ser_content .title_r {
-  height: 30px;
-  line-height: 30px;
-  border-bottom: solid 2px #ddd;
-  padding-left: 10px;
-  margin-bottom: 20px;
+.login .submit p input.short {
+  float: left;
+  width: 173px;
 }
-.wares .bottom .ser_content .title_r span {
+.login .submit p .notice {
+  font-size: 12px;
+}
+.login .submit p .yz_pic {
   display: inline-block;
-  width: 110px;
-  text-align: center;
-  cursor: pointer;
+  width: 85px;
+  height: 35px;
+  background-size: cover;
+  background-image: url(../imgs/yanzhengma.jpg);
 }
-.wares .bottom .ser_content h2 {
-  font-size: 30px;
-  line-height: 70px;
-  height: 93px;
-  text-align: center;
-  color: #2693d4;
-  border-bottom: solid 1px #ddd;
-}
-.wares .bottom .ser_content .ser_li {
-  border_bottom: solid 1px #ddd;
-  padding: 6px;
-}
-.wares .bottom .ser_content .ser_li li {
+.login .submit select {
+  width: 78px;
+  height: 34px;
   float: left;
+  margin-right: 15px;
   border: solid 1px #ddd;
-  margin: 12px;
-  height: 200px;
-  width: 235px;
-  padding: 13px;
+  border-radius: 3px;
+  padding-left: 5px;
 }
-.wares .bottom .ser_content .ser_li li .p_1 {
-  font-size: 18px;
-  margin-bottom: 10px;
+.login .submit select.mar {
+  margin: 0 20px;
 }
-.wares .bottom .ser_content .ser_li li .p_2 {
-  line-height: 27px;
-}
-.wares .bottom .ser_content .ser_li li .charge {
-  font-size: 32px;
-  font-weight: bold;
+.login .submit button {
+  width: 280px;
+  height: 34px;
+  border: solid 1px #2693d4;
+  border-radius: 5px;
+  background-color: #fff;
   color: #2693d4;
-  letter-spacing: 2px;
-  text-align: center;
+  font-size: 16px;
 }
-.wares .bottom .ser_content .ser_li li .border {
+.login .submit button.clickget {
+  float: left;
+  width: 95px;
+  margin-left: 10px;
+}
+.login .line {
+  float: left;
+  height: 262px;
+  border-left: solid 1px #ddd;
+  margin-top: 80px;
+}
+.login .boy {
+  float: left;
+  padding: 55px 0 0 190px;
+}
+.login .boy a {
+  display: block;
+  margin: 24px 0 20px 0;
+  color: #2693d4;
+}
+.login .boy .people {
   display: block;
   width: 168px;
-  height: 8px;
-  background-image: url(../imgs/border.png);
+  height: 197px;
+  background-image: url(../imgs/login.png);
   background-size: cover;
 }
-.wares .bottom .ser_content .ser_li li .yuanjia {
-  text-decoration: line-through;
+body {
+  background-color: #f7f7f7;
 }
-.wares .bottom .ser_content .ser_li li .look {
-  margin-left: 30px;
-  color: #2693d4;
+.footer {
+  background-color: #f7f7f7;
+}
+.bg_w {
+  background-color: #fff;
+  width: 100%;
+}
+.welcome {
+  float: left;
+  margin: 10px  0 0  50px;
+  padding-left: 30px;
+  border-left: solid 1px #ddd;
+  height: 56px;
+  line-height: 56px;
+  font-size: 18px;
 }

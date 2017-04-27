@@ -34,6 +34,7 @@ li {
 }
 .bor_b {
   border-bottom: solid 3px #2693d4;
+  color: #2693d4;
 }
 .title {
   line-height: 20px;
@@ -60,7 +61,6 @@ li {
   margin-top: 10px;
 }
 .header .cart_num {
-  color: #2693d4;
   line-height: 35px;
 }
 .header .fws {
@@ -83,6 +83,7 @@ li {
   background-image: url(../imgs/logo.jpg);
   background-size: cover;
   float: left;
+  cursor: pointer;
 }
 .search .city {
   width: 120px;
@@ -96,6 +97,7 @@ li {
 }
 .search .input span {
   margin: 0 5px;
+  cursor: pointer;
 }
 .search .input input {
   float: left;
@@ -180,6 +182,8 @@ li {
   height: 35px;
   line-height: 35px;
   border: solid 1px #666;
+  margin-right: 10px;
+  cursor: pointer;
 }
 .page .up,
 .page .down {
@@ -194,165 +198,199 @@ li {
   width: 52px;
   color: #666;
 }
-.wares {
+.shoplist {
   width: 1200px;
   margin: 0 auto;
-  margin-top: 10px;
 }
-.wares .top {
-  overflow: hidden;
-  height: 180px;
-  width: 100%;
-  border: solid 1px #ddd;
-  margin-bottom: 23px;
-}
-.wares .top span {
+.shoplist .liebiao {
+  width: 950px;
+  margin-right: 10px;
   float: left;
+}
+.shoplist .liebiao .main {
+  padding: 0 10px;
+  margin-bottom: 65px;
+  overflow: hidden;
+  width: 930px;
+  border: solid 1px #ddd;
+  border-top: none;
+}
+.shoplist .liebiao .main .shangpin {
+  height: 50px;
+  line-height: 50px;
+}
+.shoplist .liebiao .main .shangpin span {
+  margin: 0 30px;
+}
+.shoplist .liebiao .main li {
+  overflow: hidden;
+  height: 122px;
+  border-top: solid 1px #ddd;
+}
+.shoplist .liebiao .main li .shop_left {
+  float: left;
+  margin: 10px 10px 10px 0;
+  width: 99px;
+  height: 99px;
+  border: solid 1px #ddd;
+}
+.shoplist .liebiao .main li .shop_left .shoplogo {
   display: block;
-  width: 79px;
-  height: 86px;
-  margin: 40px 30px 0 64px;
+  width: 52px;
+  height: 56px;
   background-size: cover;
   background-image: url(../imgs/shoplogo.jpg);
+  margin: 20px auto;
 }
-.wares .top div {
+.shoplist .liebiao .main li .shop_mid {
+  padding: 10px 0;
+  margin-left: 5px;
   float: left;
 }
-.wares .top div h2 {
-  font-size: 34px;
-  margin: 45px 0 10px 0;
+.shoplist .liebiao .main li .shop_mid p {
+  height: 35px;
+  width: 600px;
 }
-.wares .bottom {
-  overflow: hidden;
+.shoplist .liebiao .main li .shop_mid p span {
+  margin-left: 70px;
 }
-.wares .bottom .com_intro {
-  float: left;
-  width: 298px;
-  height: 580px;
-  border: solid 1px #ddd;
-  margin-right: 25px;
+.shoplist .liebiao .main li .shop_mid p.address {
+  line-height: 35px;
 }
-.wares .bottom .com_intro .com_top {
-  height: 330px;
-  width: 100%;
-  border-bottom: solid 1px #ddd;
+.shoplist .liebiao .main li .shop_right {
+  padding-top: 10px;
+  float: right;
 }
-.wares .bottom .com_intro .com_top p {
-  width: 250px;
-  line-height: 30px;
-  margin: 0 auto;
-}
-.wares .bottom .com_intro .com_top p.com_title {
+.shoplist .liebiao .main li .shop_right p {
   font-size: 24px;
+  font-weight: lighter;
+  color: red;
   line-height: 50px;
-  padding-left: 10px;
-  margin: 0 0 20px 0;
-}
-.wares .bottom .com_intro ul {
-  width: 100%;
-  padding: 0 15px;
-}
-.wares .bottom .com_intro ul li {
-  float: left;
-  width: 135px;
-  height: 120px;
-}
-.wares .bottom .com_intro ul li span {
-  display: block;
-  background-size: cover;
-  margin: 20px auto 10px auto;
-}
-.wares .bottom .com_intro ul li span.com_icon1 {
-  width: 42px;
-  height: 50px;
-  background-image: url(../imgs/bao.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon2 {
-  width: 46px;
-  height: 48px;
-  background-image: url(../imgs/serve.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon3 {
-  width: 43px;
-  height: 43px;
-  background-image: url(../imgs/du.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon4 {
-  width: 41px;
-  height: 47px;
-  background-image: url(../imgs/money.jpg);
-}
-.wares .bottom .com_intro ul li p {
   text-align: center;
 }
-.wares .bottom .con_right {
+.shoplist .liebiao .main li .shop_right p span {
+  margin-top: 20px;
   float: left;
-  width: 875px;
-}
-.wares .bottom .ser_content {
-  width: 873px;
-  border: solid 1px #ddd;
-  margin-bottom: 40px;
-  overflow: hidden;
-}
-.wares .bottom .ser_content .title_r {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  width: 90px;
   height: 30px;
   line-height: 30px;
-  border-bottom: solid 2px #ddd;
-  padding-left: 10px;
-  margin-bottom: 20px;
-}
-.wares .bottom .ser_content .title_r span {
-  display: inline-block;
-  width: 110px;
   text-align: center;
+  border-radius: 3px;
+  background-color: #2693d4;
   cursor: pointer;
 }
-.wares .bottom .ser_content h2 {
-  font-size: 30px;
-  line-height: 70px;
-  height: 93px;
-  text-align: center;
-  color: #2693d4;
-  border-bottom: solid 1px #ddd;
-}
-.wares .bottom .ser_content .ser_li {
-  border_bottom: solid 1px #ddd;
-  padding: 6px;
-}
-.wares .bottom .ser_content .ser_li li {
+.shoplist .picture {
   float: left;
+  width: 238px;
+  height: 650px;
   border: solid 1px #ddd;
-  margin: 12px;
-  height: 200px;
-  width: 235px;
-  padding: 13px;
 }
-.wares .bottom .ser_content .ser_li li .p_1 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.wares .bottom .ser_content .ser_li li .p_2 {
-  line-height: 27px;
-}
-.wares .bottom .ser_content .ser_li li .charge {
-  font-size: 32px;
-  font-weight: bold;
-  color: #2693d4;
-  letter-spacing: 2px;
+.shoplist .picture li {
   text-align: center;
+  width: 170px;
+  height: 150px;
+  margin: 0 auto;
+  border-bottom: solid 2px #ddd;
 }
-.wares .bottom .ser_content .ser_li li .border {
+.shoplist .picture li.bord_b {
+  border-bottom: none;
+}
+.shoplist .picture li span {
   display: block;
-  width: 168px;
-  height: 8px;
-  background-image: url(../imgs/border.png);
+  width: 95px;
+  height: 95px;
   background-size: cover;
+  margin: 10px auto 20px auto;
 }
-.wares .bottom .ser_content .ser_li li .yuanjia {
-  text-decoration: line-through;
+.shoplist .picture li span.pic_1 {
+  background-image: url(../imgs/pic_1.jpg);
 }
-.wares .bottom .ser_content .ser_li li .look {
-  margin-left: 30px;
-  color: #2693d4;
+.shoplist .picture li span.pic_2 {
+  background-image: url(../imgs/pic_2.jpg);
+}
+.shoplist .picture li span.pic_3 {
+  background-image: url(../imgs/pic_3.jpg);
+}
+.shoplist .picture li span.pic_4 {
+  background-image: url(../imgs/pic_4.jpg);
+}
+.shoplist .picture li p {
+  font-size: 18px;
+}
+.excle {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+.excle tr {
+  height: 20px;
+  line-height: 20px;
+  border: solid 1px #ddd;
+}
+.excle td {
+  border: solid 1px #ddd;
+}
+.excle td.short {
+  width: 100px;
+  text-align: center;
+  font-size: 16px;
+}
+.excle td.long {
+  padding: 10px 20px;
+}
+.excle td select {
+  width: 85px;
+  height: 20px;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  margin-right: 5px;
+  background-color: #f7f7f7;
+}
+.excle td span {
+  margin-right: 20px;
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+.excle td .all {
+  padding: 0 10px;
+  background-color: #2693d4;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  margin-right: 20px;
+}
+.order {
+  width: 100%;
+  background-color: #f7F7F7;
+  height: 40px;
+  line-height: 40px;
+  border: solid 1px #ddd;
+}
+.order li {
+  float: left;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  position: relative;
+}
+.order li.colligate {
+  width: 107px;
+  background-color: #2693d4;
+  color: #fff;
+}
+.order li .arr {
+  position: absolute;
+  top: 12px;
+  left: 75px;
+  width: 17px;
+  height: 13px;
+  display: block;
+  background-image: url(../imgs/arr.png);
+  background-size: cover;
 }

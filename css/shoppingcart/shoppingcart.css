@@ -34,6 +34,7 @@ li {
 }
 .bor_b {
   border-bottom: solid 3px #2693d4;
+  color: #2693d4;
 }
 .title {
   line-height: 20px;
@@ -60,7 +61,6 @@ li {
   margin-top: 10px;
 }
 .header .cart_num {
-  color: #2693d4;
   line-height: 35px;
 }
 .header .fws {
@@ -83,6 +83,7 @@ li {
   background-image: url(../imgs/logo.jpg);
   background-size: cover;
   float: left;
+  cursor: pointer;
 }
 .search .city {
   width: 120px;
@@ -96,6 +97,7 @@ li {
 }
 .search .input span {
   margin: 0 5px;
+  cursor: pointer;
 }
 .search .input input {
   float: left;
@@ -170,189 +172,150 @@ li {
   background-color: #ccc;
   line-height: 45px;
 }
-.page {
-  margin-bottom: 150px;
-  text-align: center;
-}
-.page span {
-  display: inline-block;
-  width: 38px;
-  height: 35px;
-  line-height: 35px;
-  border: solid 1px #666;
-}
-.page .up,
-.page .down {
-  width: 68px;
-  color: #666;
-}
-.page .bord {
-  border: solid 1px #2693d4;
-  color: #2693d4;
-}
-.page .first {
-  width: 52px;
-  color: #666;
-}
-.wares {
+.shoppingcart {
   width: 1200px;
   margin: 0 auto;
-  margin-top: 10px;
-}
-.wares .top {
   overflow: hidden;
-  height: 180px;
-  width: 100%;
-  border: solid 1px #ddd;
-  margin-bottom: 23px;
 }
-.wares .top span {
+.shoppingcart .cart {
+  color: #666;
+}
+.shoppingcart .cart p {
+  line-height: 30px;
+  padding-left: 65px;
+}
+.shoppingcart .cart p.cart_title {
+  padding-left: 0;
+}
+.shoppingcart .cart p.cart_title span {
+  display: inline-block;
+  width: 77px;
+  margin: 0 65px;
+}
+.shoppingcart .cart .cartlist {
+  width: 1155px;
+  height: 41px;
+  line-height: 41px;
+  background-color: #f7f7f7;
+  margin-top: 25px;
+  padding: 17.5px 22.5px;
+  margin-bottom: 25px;
+}
+.shoppingcart .cart .cartlist .cart_logo {
+  float: left;
+  width: 41px;
+  height: 41px;
+  background-image: url(../imgs/shoplogo.jpg);
+  background-size: cover;
+  margin-right: 200px;
+}
+.shoppingcart .cart .cartlist span {
   float: left;
   display: block;
-  width: 79px;
-  height: 86px;
-  margin: 40px 30px 0 64px;
-  background-size: cover;
-  background-image: url(../imgs/shoplogo.jpg);
+  width: 80px;
+  margin-right: 125px;
 }
-.wares .top div {
+.shoppingcart .cart .cartlist span.mar_no {
+  width: 50px!important;
+  text-align: center;
+}
+.shoppingcart .cart .cartlist .addorreduce {
   float: left;
-}
-.wares .top div h2 {
-  font-size: 34px;
-  margin: 45px 0 10px 0;
-}
-.wares .bottom {
   overflow: hidden;
+  width: 80px;
+  margin: 10px 135px 0 10px;
 }
-.wares .bottom .com_intro {
+.shoppingcart .cart .cartlist .addorreduce span {
   float: left;
-  width: 298px;
-  height: 580px;
-  border: solid 1px #ddd;
-  margin-right: 25px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 0;
+  background-color: #bdbdbd;
 }
-.wares .bottom .com_intro .com_top {
-  height: 330px;
-  width: 100%;
-  border-bottom: solid 1px #ddd;
+.shoppingcart .cart .cartlist .addorreduce input {
+  float: left;
+  width: 30px;
+  height: 20px;
+  text-align: center;
 }
-.wares .bottom .com_intro .com_top p {
-  width: 250px;
-  line-height: 30px;
+.shoppingcart .cart .total {
+  text-align: right;
+  margin-bottom: 5px;
+}
+.shoppingcart .cart .total .font_b {
+  font-size: 20px;
+  color: #2693d4;
+}
+.shoppingcart .cart .calculate {
+  text-align: right;
+  margin-bottom: 50px;
+}
+.shoppingcart .cart .calculate a {
+  display: inline-block;
+  width: 100px;
+  height: 28px;
+  line-height: 28px;
+  border: solid 1px #2693d4;
+  color: #2693d4;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.hot {
+  width: 1200px;
   margin: 0 auto;
 }
-.wares .bottom .com_intro .com_top p.com_title {
-  font-size: 24px;
-  line-height: 50px;
-  padding-left: 10px;
-  margin: 0 0 20px 0;
-}
-.wares .bottom .com_intro ul {
-  width: 100%;
-  padding: 0 15px;
-}
-.wares .bottom .com_intro ul li {
-  float: left;
-  width: 135px;
-  height: 120px;
-}
-.wares .bottom .com_intro ul li span {
-  display: block;
-  background-size: cover;
-  margin: 20px auto 10px auto;
-}
-.wares .bottom .com_intro ul li span.com_icon1 {
-  width: 42px;
-  height: 50px;
-  background-image: url(../imgs/bao.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon2 {
-  width: 46px;
-  height: 48px;
-  background-image: url(../imgs/serve.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon3 {
-  width: 43px;
-  height: 43px;
-  background-image: url(../imgs/du.jpg);
-}
-.wares .bottom .com_intro ul li span.com_icon4 {
-  width: 41px;
-  height: 47px;
-  background-image: url(../imgs/money.jpg);
-}
-.wares .bottom .com_intro ul li p {
-  text-align: center;
-}
-.wares .bottom .con_right {
-  float: left;
-  width: 875px;
-}
-.wares .bottom .ser_content {
-  width: 873px;
-  border: solid 1px #ddd;
-  margin-bottom: 40px;
+.hot .ser_li {
   overflow: hidden;
-}
-.wares .bottom .ser_content .title_r {
-  height: 30px;
-  line-height: 30px;
-  border-bottom: solid 2px #ddd;
-  padding-left: 10px;
-  margin-bottom: 20px;
-}
-.wares .bottom .ser_content .title_r span {
-  display: inline-block;
-  width: 110px;
-  text-align: center;
-  cursor: pointer;
-}
-.wares .bottom .ser_content h2 {
-  font-size: 30px;
-  line-height: 70px;
-  height: 93px;
-  text-align: center;
-  color: #2693d4;
-  border-bottom: solid 1px #ddd;
-}
-.wares .bottom .ser_content .ser_li {
+  margin-bottom: 90px;
   border_bottom: solid 1px #ddd;
   padding: 6px;
 }
-.wares .bottom .ser_content .ser_li li {
+.hot .ser_li li {
   float: left;
   border: solid 1px #ddd;
-  margin: 12px;
-  height: 200px;
+  margin: 15px;
+  height: 159px;
   width: 235px;
   padding: 13px;
 }
-.wares .bottom .ser_content .ser_li li .p_1 {
+.hot .ser_li li .p_1 {
   font-size: 18px;
   margin-bottom: 10px;
 }
-.wares .bottom .ser_content .ser_li li .p_2 {
+.hot .ser_li li .p_2 {
   line-height: 27px;
 }
-.wares .bottom .ser_content .ser_li li .charge {
+.hot .ser_li li .charge {
   font-size: 32px;
   font-weight: bold;
   color: #2693d4;
   letter-spacing: 2px;
   text-align: center;
 }
-.wares .bottom .ser_content .ser_li li .border {
+.hot .ser_li li .border {
   display: block;
   width: 168px;
   height: 8px;
   background-image: url(../imgs/border.png);
   background-size: cover;
 }
-.wares .bottom .ser_content .ser_li li .yuanjia {
+.hot .ser_li li .yuanjia {
   text-decoration: line-through;
 }
-.wares .bottom .ser_content .ser_li li .look {
+.hot .ser_li li .look {
   margin-left: 30px;
   color: #2693d4;
+}
+.all {
+  height: 35px;
+  line-height: 35px;
+  border-bottom: solid 1px #ddd;
+  padding-left: 65px;
+  color: #2693d4;
+  margin-bottom: 10px;
 }

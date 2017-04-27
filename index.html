@@ -37,7 +37,7 @@
                 <!-- click事件服务商被点击   样式改变 -->
                 <span @click="fwsDown" :class="cpTrue?'':'col_b'">服务商</span>
 				<div class="clear">
-					<input id="cp_input" type="text" placeholder="搜索您需要的服务或服务商">
+					<input id="cp_input" type="text" v-model='inputsearch' placeholder="搜索您需要的服务或服务商">
 					<button @click="submit_go"></button>
 				</div>
 				<span>热门服务&nbsp:</span>
