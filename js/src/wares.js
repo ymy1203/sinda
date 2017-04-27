@@ -15,6 +15,8 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 				//服务内容|商品评价的显示吟唱
 				or_show:true,
 				// bg_b:'bg_b',
+				//
+				num:1,
 			}
 		},
 		mounted(){
@@ -64,6 +66,24 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 				}else{
 					this.or_show = false;
 				}
+			},
+			//立即购买跳到购物车
+			nowBuy(){
+				location.href="shoppingcart.html"
+			},
+			//数量加一
+			addNum(){
+				this.num++;
+			},
+			//数量减一
+			subNum(){
+				this.num--;
+				if(this.num<=0){
+					this.num=0;
+				}
+			},
+			inputBlur(){
+				this.num = $("#inNum").val();
 			}
 		}
 	})
