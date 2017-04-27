@@ -37,16 +37,15 @@
 					<p>
 						<span class="f-l">购买数量：</span>
 						<div class="addorreduce f-l">
-							<span>+</span>
-							<input type="text" value="1">
-							<span>-</span>
+							<span @click="addNum()">+</span>
+							<input id="inNum" type="text" :value="num" @blur="inputBlur">
+							<span @click="subNum()">-</span>
 						</div>
 					</p>
-				</div>
-					
+				</div>	
 				<div class="buttons">
-					<button  class="bg_b" @click="">立即购买</button>
-					<button class="bg_b" @click="addCart">加入购物车</button>
+				<button  class="bg_b" @click="nowBuy()">立即购买</button>
+				<button class="bg_b" @click="addCart()">加入购物车</button>
 				</div>
 			</div>
 		</div>
