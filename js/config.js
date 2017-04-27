@@ -10,7 +10,8 @@ require.config({
 		  "header"              : "../../component/header",
 		  "headerlogo"          : "../../component/header-logo",
 		  "footer"              : "../../component/footer",
-		  "area&code"			:"../lib/plugins/area&code"//静态文件用于检索地区编码
+		  "area&code"			:"../lib/plugins/area&code",//静态文件用于检索地区编码
+		  "laydate"				:"../lib/plugins/laydate/laydate"//静态文件用于检索地区编码
 　　　},
 	 shim: {
 		"vue" :{
