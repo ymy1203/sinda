@@ -59,7 +59,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
                     }
 				})
 			},
-			//立即购买加入购物车页签切换
+			//服务内容，商品评价页签切换
 			surInfo(bool){
 				if(bool){
 					this.or_show = true;
@@ -69,7 +69,42 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 			},
 			//立即购买跳到购物车
 			nowBuy(){
+				var theId=this.goodsID;
+				var theNum=this.num;
+				$.ajax({
+		            type: "post",
+		            url: "/xinda-api/cart/add",
+		            data: {
+		               	id:theId,
+						num:theNum			
+		            },
+		            dataType: "json",
+		            success: function(data, textStatus) {
+		                console.log(data); //未登录
+		            },
+		            error: function(xhr, textStatus) {
+		                console.log(xhr.readyState);
+		                console.log(textStatus);
+		            }
+	        	});
 				location.href="shoppingcart.html"
+			},
+			addCart(){
+				$.ajax({
+		            type: "post",
+		            url: "/xinda-api/cart/list",
+		            data: {
+		      		
+		            },
+		            dataType: "json",
+		            success: function(data, textStatus) {
+		                console.log(data); //未登录
+		            },
+		            error: function(xhr, textStatus) {
+		                console.log(xhr.readyState);
+		                console.log(textStatus);
+		            }
+	        	});
 			},
 			//数量加一
 			addNum(){
