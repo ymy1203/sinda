@@ -90,11 +90,14 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 				location.href="shoppingcart.html"
 			},
 			addCart(){
+				var theId=this.goodsID;
+				var theNum=this.num;
 				$.ajax({
 		            type: "post",
-		            url: "/xinda-api/cart/list",
+		            url: "/xinda-api/cart/add",
 		            data: {
-		      		
+		               	id:theId,
+						num:theNum			
 		            },
 		            dataType: "json",
 		            success: function(data, textStatus) {
