@@ -5,6 +5,7 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         created() {
             this.search(this.val,this.page_n);
             this.csorgs();
+            // this.val=='财务税收'?this.vShow = true:this.vShow=false;
         },
         data(){
         	return{
@@ -26,7 +27,10 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         		//服务分类默认背景颜色为第一个
         		spanKey:0,
         		spanKey2:0,
-        		//
+        		//显示隐藏
+                vShow:true,
+                //公司工商的AJAX数据
+                gsgs:'',
         	}
         },
         methods:{
@@ -40,6 +44,7 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
 			            dataType: "json",
 			            success: function(data) {
 			            //处理返回数据----0级；
+
 			            	var data0 = data.data;
 			            	that.producType = data0;
 		                }
@@ -66,19 +71,21 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
 	                    }
         			})
 	        	}else{
-	        		//公司工商页面接口用错了，等着改
+	        		//公司工商页面接口
 	        		$.ajax({
         				type: "post",
-	                    url: "http://115.182.107.203:8088/xinda/xinda-api/provider/search-grid",
+	                    url: "http://115.182.107.203:8088/xinda/xinda-api/product/package/grid",
 	                    data: {
 	                    	start:n,
 	                    	limit:8,
-	                    	searchName:val,
-	                    	sort:''
+	                    	productTypeCode: "1",
+                            productId: "8a82f52b674543e298d2e5f685946e6e",
+	                    	sort:'2'
 	                    },
 	                    dataType: "json",
 	                    success: function(data) {
-	                    	console.log(data);
+                            that.gsgs = data.data; 
+	                    	console.log(that.gsgs);
 	                    	// that.product = data;
 	                    }
         			})
@@ -125,7 +132,66 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         	goShopDetil(id){
                 sessionStorage.goodsID = id;
         		location.href = "wares.html"
-        	}
+        	},
+            addCart(id){
+                var theId=id;
+                $.ajax({
+                    type: "post",
+                    url: "/xinda-api/cart/add",
+                    async: false,
+                    data: {
+                        id:theId,
+                        num:1         
+                    },
+                    dataType: "json",
+                    success: function(data, textStatus) {
+                        console.log(data); //未登录
+                    },
+                    error: function(xhr, textStatus) {
+                        console.log(xhr.readyState);
+                        console.log(textStatus);
+                    }
+                });
+                 var loginStatus = 0;
+                //修改头部购物车数量
+                $.ajax({
+                    type: "post",
+                    url: "/xinda-api/sso/login-info",
+                    data: {},
+                    dataType: "json",
+                    async: false,
+                    success: function(data, textStatus) {
+                        if (data.status == 1)loginStatus = 1; 
+                            
+                    },
+                    error: function(xhr, textStatus) {
+                                        // console.log(xhr.readyState);
+                                        // console.log(textStatus);
+                    }
+                });
+                if (loginStatus == 1) {
+                    $.ajax({
+                        type: "post",
+                        url: "/xinda-api/cart/cart-num",
+                        data: {},
+                        dataType: "json",
+                        async: false,
+                        success: function(data, textStatus) {
+
+                            if (data.status == 1) {
+                                console.log(data.data.cartNum);
+                               $(".cart_num")[0].innerHTML=data.data.cartNum;
+                                
+                            }
+                            // console.log(data);
+                        },
+                        error: function(xhr, textStatus) {
+                            // console.log(xhr.readyState);
+                            // console.log(textStatus);
+                        }
+                    });
+                }
+            }
         },
         mounted:function() {
         	//判断是财务税收还是公司工商
@@ -134,13 +200,17 @@ require(['vue','dist','jquery','header','headerlogo', 'footer'], function(Vue) {
         		$(".company").addClass("bor_b");
         		//改变DOM元素
         		this.vforVif = 2;
+                this.vShow = false;
         	}else if(sessionStorage.gs=="财税服务"){
         		$(".money").addClass("bor_b");
         		$(".company").removeClass("bor_b");
         		//改变DOM元素
         		this.vforVif = 1;
+                this.vShow = true;
         	};
             // console.log($("#welcome"));
         }
     })
 })
+
+

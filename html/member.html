@@ -25,14 +25,14 @@
 				</div>
 				
 				<ul>
-					<li class=" bg_b"><span class="men_i1"></span>我的订单</li>
-					<li><span class="men_i2"></span>用户评价</li>
-					<li><span class="men_i3"></span>账户设置</li>
+					<li :class="menpage==0?'bg_b':''" @click="turnpage(0)"><span class="men_i1"></span>我的订单</li>
+					<li :class="menpage==1?'bg_b':''" @click="turnpage(1)"><span class="men_i2"></span>用户评价</li>
+					<li :class="menpage==2?'bg_b':''" @click="turnpage(2)"><span class="men_i3"></span>账户设置</li>
 				</ul>
 			</div>
-			<div class="mem_right f-l">
+			<div class="mem_right f-l" style="width:935px">
 				<!-- 我的订单 -->
-				<div class="myorder">
+				<div class="myorder" v-if="menpage==0">
 					<p class="title_r"><span>我的订单</span></p>
 					<div class="order_num">
 						<span>订单号：</span>
@@ -130,13 +130,24 @@
 					</div>
 				</div>
 				<!-- 用户评价 -->
-				<div class="usercomment">
+				<div class="usercomment" v-if="menpage==1">
 					<p class="title_r"><span>我的评价</span></p>
 					<ul class="yesorno">
-						<li class="bg_b">未评价</li>
-						<li>已评价</li>
+						<li :class="pingjia?'bg_b':''" @click="clpingjia(true)">未评价</li>
+						<li :class="pingjia?'':'bg_b'" @click="clpingjia(false)">已评价</li>
 					</ul>
-					<ul class="com_list">
+					<ul class="com_list" v-if="pingjia">
+						<li>
+							<div class="li_left"></div>
+							<div class="li_center">
+								<p class="p1">信达背景服务中心</p>
+								<p>服务单号：<span>B1823</span>              购买时间：2016-01-01 02：12：21</p>
+								<p>购买内容：test</p>
+							</div>
+							<div class="com_go"><span>去评价</span></div>
+						</li>
+					</ul>
+					<ul v-else>
 						<li>
 							<div class="li_left"></div>
 							<div class="li_center">
@@ -150,10 +161,13 @@
 
 				</div>
 				<!-- 账户设置 -->
-				<div class="set">
-					<p class="title_r"><span class="cobo_b">账户设置</span><span>修改密码</span></p>
+				<div class="set" v-if="menpage==2">
+					<p class="title_r">
+						<span :class="zhPage?'cobo_b':''" @click="clpage(true)">账户设置</span>
+						<span :class="zhPage?'':'cobo_b'" @click="clpage(false)">修改密码</span>
+					</p>
 					<!-- 设置个人资料 -->
-					<div class="setaccount">
+					<div class="setaccount" v-if="zhPage">
 						<p class="p1">
 							<span>当前头像：</span>
 							<span class="now_tx"></span>
@@ -186,7 +200,7 @@
 						<button class="keep">保存</button>
 					</div>
 					<!-- 修改密码 -->
-					<div class="change_psw">
+					<div class="change_psw" v-else>
 						<p>
 							<span>旧密码：</span>
 							<input type="text">
@@ -203,7 +217,7 @@
 					</div>
 				</div>
 				<!-- 上一页下一页 -->
-				<div class="page">
+				<div class="page" v-if="menpage==0||menpage==1" style="margin-top:40px">
 					<span class="up">上一页</span>
 					<span class="bord">1</span>
 					<span class="down">下一页</span>
@@ -216,6 +230,6 @@
 	<vue-footer></vue-footer>
     </div>
 </body>
-	<script id="mainScript" src="../js/require.js" data-main="../js/src/index"></script>
+	<script id="mainScript" src="../js/require.js" data-main="../js/src/member"></script>
 	<script src="../js/config.js"></script>
 </html>

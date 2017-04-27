@@ -53,21 +53,42 @@
 				<li class="colligate">综合排序</li>
 				<li>价格<span class="arr"></span></li>
 			</ul>
-			
-			
-			
-			
-			
-			
-		
-		
-			<ul class="main">
+
+			<!-- 财税服务显示 -->
+			<ul class="main" v-if="vShow">
 				<p class="shangpin">
 					<span class="f-l">商品</span>
 					<span class="f-r">价格</span>
 				</p>
 				<!-- v-for 循环-->
 				<li v-for="item in product.data">
+					<div class="shop_left">
+						<span class="shoplogo"></span>
+					</div>
+					<div class="shop_mid">
+						<p>{{item.serviceName}}</p>
+						<p>{{item.serviceInfo}}</p>
+						<p class="address">{{item.providerName}}
+							<span>{{item.regionName}}</span>
+						</p>
+					</div>
+					<div class="shop_right">
+						<p>￥{{(item.price/100).toFixed(2)}}</p>
+						<p>
+							<span @click="goShopDetil(item.id)">立即购买</span>
+							<span @click="addCart(item.id)">加入购物车</span>
+						</p>
+					</div>
+				</li>
+			</ul>
+			<!-- 公司工商显示 -->
+			<ul class="main" v-else>
+				<p class="shangpin">
+					<span class="f-l">商品</span>
+					<span class="f-r">价格</span>
+				</p>
+				<!-- v-for 循环-->
+				<li v-for="item in gsgs">
 					<div class="shop_left">
 						<span class="shoplogo"></span>
 					</div>

@@ -10,7 +10,7 @@ define(['vue', 'jquery'], function(Vue, $) {
 							<div class="f-r">\
 								<span class="cart f-l"></span>\
 								<span>购物车<span class="cart_num">0</span>件</span>\
-								<span class="col_b fws">服务商入口</span>\
+								<span class="col_b fws" style="cursor:pointer;">服务商入口</span>\
 							</div>\
 						</div>\
 					</div>\

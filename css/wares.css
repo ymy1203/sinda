@@ -343,6 +343,7 @@ li {
   border: solid 1px #ddd;
   background-color: #f7f7f7;
   vertical-align: bottom;
+  cursor: pointer;
 }
 .wares .intro .addorreduce input {
   display: inline-block;
