@@ -18,8 +18,8 @@
 				<a id="register_a" href="html/register.html">快速注册</a>
 				<div class="f-r">
 					<span class="cart f-l"></span>
-					<span>购物车<span class="cart_num">0</span>件</span>
-					<span class="col_b fws">服务商入口</span>
+					<span style="cursor:pointer;">购物车<span class="cart_num" >0</span>件</span>
+					<span class="col_b fws" style="cursor:pointer;">服务商入口</span>
 				</div>
 			</div>
 		</div>
@@ -37,7 +37,7 @@
                 <!-- click事件服务商被点击   样式改变 -->
                 <span @click="fwsDown" :class="cpTrue?'':'col_b'">服务商</span>
 				<div class="clear">
-					<input id="cp_input" type="text" placeholder="搜索您需要的服务或服务商">
+					<input id="cp_input" type="text" v-model='inputsearch' placeholder="搜索您需要的服务或服务商">
 					<button @click="submit_go"></button>
 				</div>
 				<span>热门服务&nbsp:</span>

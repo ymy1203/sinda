@@ -1,0 +1,61 @@
+.set .title_r {
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10px;
+  border-bottom: solid 2px #ddd;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.set .title_r span {
+  display: inline-block;
+  width: 110px;
+  text-align: center;
+}
+.set .setaccount p {
+  line-height: 50px;
+}
+.set .setaccount p span {
+  display: inline-block;
+  width: 95px;
+}
+.set .setaccount p.p1 {
+  line-height: 110px;
+  position: relative;
+}
+.set .setaccount p .now_tx {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  display: block;
+  width: 99px;
+  height: 99px;
+  background-size: cover;
+  background-image: url(../imgs/member.png);
+}
+.set .setaccount p .set_name,
+.set .setaccount p .set_email {
+  width: 175px;
+  height: 24px;
+  padding-left: 5px;
+  border: solid 1px #ddd;
+}
+.set .setaccount p .radio_nv {
+  margin-left: 30px;
+}
+.set .setaccount p select {
+  width: 75px;
+  height: 24px;
+  border: solid 1px #ddd;
+  margin-right: 5px;
+}
+.set .setaccount .keep {
+  width: 68px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin: 30px 100px;
+  border: solid 1px #2693d4;
+  color: #2693d4;
+  background-color: #fff;
+  border-radius: 5px;
+}

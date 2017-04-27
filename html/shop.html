@@ -33,28 +33,17 @@
 			<tr>
 				<td class="short">产品类型</td>
 				<td class="long">
-					<span class="all">所有</span>
-					<span>专利申请</span>
-					<span>版权保护</span>
-					<span>商标注册</span>
-					<span>代理记账</span>
-					<span>公司注册</span>
-					<span>企业社保</span>
-					<span>公司变更</span>
-					<span>税务代办</span>
-					<span>个人社保</span>
-					<span>审计报告</span>
+					<span v-for="(items,index) in protypes" :class="index == spanKey?'all':''" @click="toogle(index)">{{items}}</span>
 				</td>
 			</tr>
 		</table>
 		<!-- 综合排序 -->
 		<ul class="order">
-			<li class="colligate">综合排序</li>
-			<li>价格<span class="arr"></span></li>
-			<li>接单数<span class="arr"></li>
+			<li :class="index == spanKey2?'sort':''" v-for="(sort,index) in sorts" @click="show(index)">{{sort}}</li>
 		</ul>
 		<ul class="main">
-			<li>
+			<li v-for="(company,key) in dat">
+				<!--{{company}}-->
 				<div class="xinda">
 					<div class="logo"></div>
 					<div class="jpfws">
@@ -63,7 +52,7 @@
 					</div>
 				</div>
 				<div class="shop_intro">
-					<p>信达北京服务中心</p>
+					<p>{{company.providerName}}</p>
 					<div class="xinyu">
 						<span>信誉</span>
 						<span class="xinyu_iconr"></span>
@@ -72,52 +61,15 @@
 						<span class="xinyu_iconr"></span>
 						<span class="xinyu_iconb"></span>
 					</div>
-					<p>北京-北京市-朝阳区</p>
+					<p>{{company.regionName}}</p>
 					<p>累计服务客户次数：
-						<span class="kehu_num">8272</span>
-						|&nbsp;&nbsp;&nbsp;好评率：
-						<span class="good">100%</span>
+						<span class="kehu_num">{{company.orderNum}}</span>
+						|&nbsp;&nbsp;&nbsp;好评率：{{judge(company.goodJudge,company.totalJudge)}}
 					</p>
-					<p class="blue">
-						<span>税务代办</span>
-						<span>代理记账</span>
-						<span>个人社保</span>
-						<span>公司变更</span>
-					</p>
-					<div class="enter">进入店铺</div>
-				</div>
-			</li>
-			<li>
-				<div class="xinda">
-					<div class="logo"></div>
-					<div class="jpfws">
-						<span class="gold f-l"></span>
-						<span class="letter f-l">金牌服务商</span>
+					<div class="blue">
+						<div class="blue" v-for='val in types[key]'>{{val}}</div>
 					</div>
-				</div>
-				<div class="shop_intro">
-					<p>信达北京服务中心</p>
-					<div class="xinyu">
-						<span>信誉</span>
-						<span class="xinyu_iconr"></span>
-						<span class="xinyu_iconr"></span>
-						<span class="xinyu_iconr"></span>
-						<span class="xinyu_iconr"></span>
-						<span class="xinyu_iconb"></span>
-					</div>
-					<p>北京-北京市-朝阳区</p>
-					<p>累计服务客户次数：
-						<span class="kehu_num">8272</span>
-						|&nbsp;&nbsp;&nbsp;好评率：
-						<span class="good">100%</span>
-					</p>
-					<p class="blue">
-						<span>税务代办</span>
-						<span>代理记账</span>
-						<span>个人社保</span>
-						<span>公司变更</span>
-					</p>
-					<div class="enter">进入店铺</div>
+					<div class="enter" @click="enter(key,company)">进入店铺</div>
 				</div>
 			</li>
 		</ul>	

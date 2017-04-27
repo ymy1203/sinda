@@ -1,0 +1,91 @@
+.shop .title {
+  line-height: 20px;
+  margin: 20px 0 5px 0;
+  font-size: 14px;
+}
+.shop .main {
+  margin-bottom: 65px;
+  overflow: hidden;
+  width: 100%;
+  height: 280px;
+  border: solid 1px #ddd;
+  border-top: none;
+}
+.shop .main li {
+  float: left;
+  width: 570px;
+  height: 252px;
+  border: solid 1px #ddd;
+  margin: 12px 14px;
+}
+.shop .main li .xinda .logo {
+  width: 126px;
+  height: 58px;
+  background-image: url(../imgs/logo.jpg);
+  background-size: cover;
+  margin: 75px 45px 58px 35px;
+}
+.shop .main li .xinda .jpfws {
+  text-align: center;
+  line-height: 30px;
+}
+.shop .main li .xinda .jpfws .gold {
+  display: inline-block;
+  width: 28px;
+  height: 32px;
+  background-image: url(../imgs/jinpai.jpg);
+  background-size: cover;
+  margin: 0 5px 0 50px;
+}
+.shop .main li .shop_intro {
+  margin-top: 25px;
+  line-height: 25px;
+}
+.shop .main li .shop_intro .xinyu {
+  margin-top: 8px;
+}
+.shop .main li .shop_intro .xinyu span {
+  margin-right: 10px;
+}
+.shop .main li .shop_intro .xinyu .xinyu_iconr {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+  background-size: cover;
+  background-image: url(../imgs/hongzuan.jpg);
+}
+.shop .main li .shop_intro .xinyu .xinyu_iconb {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+  background-size: cover;
+  background-image: url(../imgs/heizuan.jpg);
+}
+.shop .main li .shop_intro .enter {
+  width: 102px;
+  height: 33px;
+  border-radius: 5px;
+  background-color: #ff591b;
+  text-align: center;
+  line-height: 33px;
+  color: #fff;
+  margin-top: 40px;
+}
+.shop .main li .shop_intro .blue {
+  margin-top: 5px;
+}
+.shop .main li .shop_intro .blue p {
+  display: inline-block;
+  width: 71px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  color: #fff;
+  background-color: #2693d4;
+  border-radius: 3px;
+}
+.shop .main li .shop_intro .kehu_num {
+  margin-right: 10px;
+}

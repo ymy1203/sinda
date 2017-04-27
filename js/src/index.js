@@ -17,6 +17,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue) {
                 tri_left:'left:37px',
                 //产品|服务商
                 cpTrue:true,
+                inputsearch:''
             }
         },
         methods: {
@@ -84,6 +85,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue) {
             		sessionStorage.aa_cp = false;
             		sessionStorage.aa_value = $("#cp_input").val();
             	}
+				console.log(this.inputsearch)
             	location.href="html/shop_list.html";
             },
             //跳转的是公司工商还是财税服务
@@ -156,7 +158,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue) {
         if(loginStatus==1){
             $.ajax({
                 type: "post",
-                 url: "/xinda-api/cart/cart-num",
+                url: "/xinda-api/cart/cart-num",
                 data: {
                 },
                 dataType: "json",

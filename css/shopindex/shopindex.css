@@ -1,0 +1,361 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+.content {
+  width: 1200px;
+  margin: 0 auto;
+}
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+.clear {
+  overflow: hidden;
+}
+.col_b {
+  color: #2693d4;
+}
+.cobo_b {
+  color: #2693d4;
+  border-bottom: solid 2px #2693d4;
+}
+.bor_b {
+  border-bottom: solid 3px #2693d4;
+  color: #2693d4;
+}
+.title {
+  line-height: 20px;
+  margin: 20px 0 5px 0;
+  font-size: 14px;
+}
+.mar_no {
+  margin-right: 0px!important;
+}
+.header {
+  height: 35px;
+  line-height: 35px;
+  background-color: #f7f7f7;
+}
+.header a {
+  color: #1abcff;
+  margin: 0 10px;
+}
+.header .cart {
+  display: block;
+  width: 21px;
+  height: 17px;
+  background-image: url(../imgs/cart.png);
+  margin-top: 10px;
+}
+.header .cart_num {
+  line-height: 35px;
+}
+.header .fws {
+  margin: 0 0 0 5px;
+}
+.header span {
+  margin: 2px;
+}
+.search {
+  overflow: hidden;
+  height: 90px;
+  padding-top: 25px;
+  width: 1200px;
+  margin: 0 auto;
+}
+.search .logo {
+  margin-top: 10px;
+  width: 128px;
+  height: 56px;
+  background-image: url(../imgs/logo.jpg);
+  background-size: cover;
+  float: left;
+  cursor: pointer;
+}
+.search .city {
+  width: 120px;
+  float: left;
+  line-height: 20px;
+  margin: 20px  0 0 30px;
+}
+.search .input {
+  float: left;
+  margin-left: 70px;
+}
+.search .input span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.search .input input {
+  float: left;
+  margin: 5px 0;
+  width: 470px;
+  height: 37px;
+  border: solid 2px #2693d4;
+  padding-left: 10px;
+}
+.search .input button {
+  float: left;
+  margin-top: 5px;
+  width: 100px;
+  height: 41px;
+  background-color: #2693d4;
+  background-image: url(../imgs/search.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.search .tel {
+  float: right;
+  margin: 15px 0 0 110px;
+}
+.search .tel .tel_icon {
+  float: left;
+  display: inline-block;
+  width: 45px;
+  height: 50px;
+  background-image: url(../imgs/tel.gif);
+}
+.search .tel .tel_num {
+  float: left;
+  font-size: 10.8px;
+  line-height: 50px;
+  color: #a3a3a3;
+  font-weight: bold;
+  margin-left: 5px;
+  letter-spacing: 1px;
+}
+.guide {
+  overflow: hidden;
+  width: 100%;
+  height: 45px;
+  border-bottom: solid 1px #2693d4;
+  margin-top: 5px;
+}
+.guide a {
+  float: left;
+  width: 80px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 60px;
+}
+.aboutus {
+  background-color: #f8f8f8;
+  padding-bottom: 40px;
+}
+.aboutus p {
+  line-height: 25px;
+}
+.aboutus p.p1 {
+  line-height: 85px;
+  font-size: 18px;
+}
+.footer {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  background-color: #ccc;
+  line-height: 45px;
+}
+.page {
+  margin-bottom: 150px;
+  text-align: center;
+}
+.page span {
+  display: inline-block;
+  width: 38px;
+  height: 35px;
+  line-height: 35px;
+  border: solid 1px #666;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.page .up,
+.page .down {
+  width: 68px;
+  color: #666;
+}
+.page .bord {
+  border: solid 1px #2693d4;
+  color: #2693d4;
+}
+.page .first {
+  width: 52px;
+  color: #666;
+}
+.wares {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.wares .top {
+  overflow: hidden;
+  height: 180px;
+  width: 100%;
+  border: solid 1px #ddd;
+  margin-bottom: 23px;
+}
+.wares .top span {
+  float: left;
+  display: block;
+  width: 79px;
+  height: 86px;
+  margin: 40px 30px 0 64px;
+  background-size: cover;
+  background-image: url(../imgs/shoplogo.jpg);
+}
+.wares .top div {
+  float: left;
+}
+.wares .top div h2 {
+  font-size: 34px;
+  margin: 45px 0 10px 0;
+}
+.wares .bottom {
+  overflow: hidden;
+}
+.wares .bottom .com_intro {
+  float: left;
+  width: 298px;
+  height: 580px;
+  border: solid 1px #ddd;
+  margin-right: 25px;
+}
+.wares .bottom .com_intro .com_top {
+  height: 330px;
+  width: 100%;
+  border-bottom: solid 1px #ddd;
+}
+.wares .bottom .com_intro .com_top p {
+  width: 250px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+.wares .bottom .com_intro .com_top p.com_title {
+  font-size: 24px;
+  line-height: 50px;
+  padding-left: 10px;
+  margin: 0 0 20px 0;
+}
+.wares .bottom .com_intro ul {
+  width: 100%;
+  padding: 0 15px;
+}
+.wares .bottom .com_intro ul li {
+  float: left;
+  width: 135px;
+  height: 120px;
+}
+.wares .bottom .com_intro ul li span {
+  display: block;
+  background-size: cover;
+  margin: 20px auto 10px auto;
+}
+.wares .bottom .com_intro ul li span.com_icon1 {
+  width: 42px;
+  height: 50px;
+  background-image: url(../imgs/bao.jpg);
+}
+.wares .bottom .com_intro ul li span.com_icon2 {
+  width: 46px;
+  height: 48px;
+  background-image: url(../imgs/serve.jpg);
+}
+.wares .bottom .com_intro ul li span.com_icon3 {
+  width: 43px;
+  height: 43px;
+  background-image: url(../imgs/du.jpg);
+}
+.wares .bottom .com_intro ul li span.com_icon4 {
+  width: 41px;
+  height: 47px;
+  background-image: url(../imgs/money.jpg);
+}
+.wares .bottom .com_intro ul li p {
+  text-align: center;
+}
+.wares .bottom .con_right {
+  float: left;
+  width: 875px;
+}
+.wares .bottom .ser_content {
+  width: 873px;
+  height: 580px;
+  border: solid 1px #ddd;
+  margin-bottom: 40px;
+}
+.wares .bottom .ser_content .title_r {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: solid 2px #ddd;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.wares .bottom .ser_content .title_r span {
+  display: inline-block;
+  width: 110px;
+  text-align: center;
+}
+.wares .bottom .ser_content h2 {
+  font-size: 30px;
+  line-height: 70px;
+  height: 93px;
+  text-align: center;
+  color: #2693d4;
+  border-bottom: solid 1px #ddd;
+}
+.wares .bottom .ser_content .ser_li {
+  border_bottom: solid 1px #ddd;
+  padding: 6px;
+}
+.wares .bottom .ser_content .ser_li li {
+  float: left;
+  border: solid 1px #ddd;
+  margin: 12px;
+  height: 159px;
+  width: 235px;
+  padding: 13px;
+}
+.wares .bottom .ser_content .ser_li li .p_1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.wares .bottom .ser_content .ser_li li .p_2 {
+  line-height: 27px;
+}
+.wares .bottom .ser_content .ser_li li .charge {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2693d4;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.wares .bottom .ser_content .ser_li li .border {
+  display: block;
+  width: 168px;
+  height: 8px;
+  background-image: url(../imgs/border.png);
+  background-size: cover;
+}
+.wares .bottom .ser_content .ser_li li .yuanjia {
+  text-decoration: line-through;
+}
+.wares .bottom .ser_content .ser_li li .look {
+  margin-left: 30px;
+  color: #2693d4;
+}

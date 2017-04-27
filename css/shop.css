@@ -212,14 +212,14 @@ li {
   margin-bottom: 65px;
   overflow: hidden;
   width: 100%;
-  height: 280px;
+  /*height: 280px;*/
   border: solid 1px #ddd;
   border-top: none;
 }
 .shop .main li {
   float: left;
   width: 570px;
-  height: 252px;
+  height: 281px;
   border: solid 1px #ddd;
   margin: 12px 14px;
 }
@@ -249,6 +249,7 @@ li {
   float: left;
   margin-top: 25px;
   line-height: 25px;
+  width: 364px;
 }
 .shop .main li .shop_intro .xinyu {
   margin-top: 8px;
@@ -273,17 +274,35 @@ li {
   background-image: url(../imgs/heizuan.jpg);
 }
 .shop .main li .shop_intro .enter {
-  width: 102px;
-  height: 33px;
-  border-radius: 5px;
-  background-color: #ff591b;
-  text-align: center;
-  line-height: 33px;
-  color: #fff;
-  margin-top: 40px;
+	margin-top: 14px;
+  background: #ff591b;
+						display: inline-block;
+						width: 102px;
+						height: 33px;
+						color: #fff;
+						font-size: 14px;
+						line-height: 33px;
+						text-align: center;
+						border-radius: 4px;
+						cursor: pointer;
 }
 .shop .main li .shop_intro .blue {
+  overflow: hidden;
+  height: 74px;
+}
+.shop .main li .shop_intro .blue div{
   margin-top: 5px;
+  float: left;
+	background: #2693D4;
+	color: #fff;
+	width: 70px;
+	height: 22px;
+	border-radius: 5px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 22px;
+	margin-right: 5px;
+	margin-bottom: 10px;
 }
 .shop .main li .shop_intro .blue span {
   display: inline-block;
@@ -342,6 +361,21 @@ li {
   text-align: center;
   margin-right: 20px;
 }
+.order .sort {
+  background-color: #2693d4;
+  color: #fff;
+  text-align: center;
+}
+.order .sort:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border: 5px solid transparent;
+				border-top-color: #2693d4;
+				position: absolute;
+				bottom: -10px;
+				right: 45px;
+			}
 .order {
   width: 100%;
   background-color: #f7F7F7;
@@ -354,6 +388,7 @@ li {
   width: 100px;
   height: 40px;
   text-align: center;
+  cursor: pointer;
   position: relative;
 }
 .order li.colligate {

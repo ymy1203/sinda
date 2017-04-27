@@ -1,0 +1,305 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+.content {
+  width: 1200px;
+  margin: 0 auto;
+}
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+.clear {
+  overflow: hidden;
+}
+.col_b {
+  color: #2693d4;
+}
+.cobo_b {
+  color: #2693d4;
+  border-bottom: solid 2px #2693d4;
+}
+.bor_b {
+  border-bottom: solid 3px #2693d4;
+  color: #2693d4;
+}
+.title {
+  line-height: 20px;
+  margin: 20px 0 5px 0;
+  font-size: 14px;
+}
+.mar_no {
+  margin-right: 0px!important;
+}
+.header {
+  height: 35px;
+  line-height: 35px;
+  background-color: #f7f7f7;
+}
+.header a {
+  color: #1abcff;
+  margin: 0 10px;
+}
+.header .cart {
+  display: block;
+  width: 21px;
+  height: 17px;
+  background-image: url(../imgs/cart.png);
+  margin-top: 10px;
+}
+.header .cart_num {
+  line-height: 35px;
+}
+.header .fws {
+  margin: 0 0 0 5px;
+}
+.header span {
+  margin: 2px;
+}
+.search {
+  overflow: hidden;
+  height: 90px;
+  padding-top: 25px;
+  width: 1200px;
+  margin: 0 auto;
+}
+.search .logo {
+  margin-top: 10px;
+  width: 128px;
+  height: 56px;
+  background-image: url(../imgs/logo.jpg);
+  background-size: cover;
+  float: left;
+  cursor: pointer;
+}
+.search .city {
+  width: 120px;
+  float: left;
+  line-height: 20px;
+  margin: 20px  0 0 30px;
+}
+.search .input {
+  float: left;
+  margin-left: 70px;
+}
+.search .input span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.search .input input {
+  float: left;
+  margin: 5px 0;
+  width: 470px;
+  height: 37px;
+  border: solid 2px #2693d4;
+  padding-left: 10px;
+}
+.search .input button {
+  float: left;
+  margin-top: 5px;
+  width: 100px;
+  height: 41px;
+  background-color: #2693d4;
+  background-image: url(../imgs/search.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.search .tel {
+  float: right;
+  margin: 15px 0 0 110px;
+}
+.search .tel .tel_icon {
+  float: left;
+  display: inline-block;
+  width: 45px;
+  height: 50px;
+  background-image: url(../imgs/tel.gif);
+}
+.search .tel .tel_num {
+  float: left;
+  font-size: 10.8px;
+  line-height: 50px;
+  color: #a3a3a3;
+  font-weight: bold;
+  margin-left: 5px;
+  letter-spacing: 1px;
+}
+.guide {
+  overflow: hidden;
+  width: 100%;
+  height: 45px;
+  border-bottom: solid 1px #2693d4;
+  margin-top: 5px;
+}
+.guide a {
+  float: left;
+  width: 80px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 60px;
+}
+.aboutus {
+  background-color: #f8f8f8;
+  padding-bottom: 40px;
+}
+.aboutus p {
+  line-height: 25px;
+}
+.aboutus p.p1 {
+  line-height: 85px;
+  font-size: 18px;
+}
+.footer {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  background-color: #ccc;
+  line-height: 45px;
+}
+.page {
+  margin-bottom: 150px;
+  text-align: center;
+}
+.page span {
+  display: inline-block;
+  width: 38px;
+  height: 35px;
+  line-height: 35px;
+  border: solid 1px #666;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.page .up,
+.page .down {
+  width: 68px;
+  color: #666;
+}
+.page .bord {
+  border: solid 1px #2693d4;
+  color: #2693d4;
+}
+.page .first {
+  width: 52px;
+  color: #666;
+}
+.login {
+  width: 1200px;
+  margin: 0 auto;
+  height: 435px;
+  background-color: #fff;
+  margin: 55px auto 170px auto ;
+}
+.login .submit {
+  float: left;
+  width: 285px;
+  margin: 50px 170px 0 150px ;
+}
+.login .submit p {
+  overflow: hidden;
+  margin-bottom: 17px;
+  text-align: center;
+}
+.login .submit p input {
+  width: 275px;
+  height: 34px;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+.login .submit p input.short {
+  float: left;
+  width: 173px;
+}
+.login .submit p .notice {
+  font-size: 12px;
+}
+.login .submit p .yz_pic {
+  display: inline-block;
+  width: 85px;
+  height: 35px;
+  background-size: cover;
+  background-image: url(../imgs/yanzhengma.jpg);
+}
+.login .submit select {
+  width: 78px;
+  height: 34px;
+  float: left;
+  margin-right: 15px;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+.login .submit select.mar {
+  margin: 0 20px;
+}
+.login .submit button {
+  width: 280px;
+  height: 34px;
+  border: solid 1px #2693d4;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #2693d4;
+  font-size: 16px;
+}
+.login .submit button.clickget {
+  float: left;
+  width: 95px;
+  margin-left: 10px;
+}
+.login .line {
+  float: left;
+  height: 262px;
+  border-left: solid 1px #ddd;
+  margin-top: 80px;
+}
+.login .boy {
+  float: left;
+  padding: 55px 0 0 190px;
+}
+.login .boy a {
+  display: block;
+  margin: 24px 0 20px 0;
+  color: #2693d4;
+}
+.login .boy .people {
+  display: block;
+  width: 168px;
+  height: 197px;
+  background-image: url(../imgs/login.png);
+  background-size: cover;
+}
+body {
+  background-color: #f7f7f7;
+}
+.footer {
+  background-color: #f7f7f7;
+}
+.bg_w {
+  background-color: #fff;
+  width: 100%;
+}
+.welcome {
+  float: left;
+  margin: 10px  0 0  50px;
+  padding-left: 30px;
+  border-left: solid 1px #ddd;
+  height: 56px;
+  line-height: 56px;
+  font-size: 18px;
+}

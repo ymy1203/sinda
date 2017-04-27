@@ -291,9 +291,9 @@ li {
 }
 .wares .bottom .ser_content {
   width: 873px;
-  height: 580px;
   border: solid 1px #ddd;
   margin-bottom: 40px;
+  overflow: hidden;
 }
 .wares .bottom .ser_content .title_r {
   height: 30px;
@@ -306,6 +306,7 @@ li {
   display: inline-block;
   width: 110px;
   text-align: center;
+  cursor: pointer;
 }
 .wares .bottom .ser_content h2 {
   font-size: 30px;
@@ -323,7 +324,7 @@ li {
   float: left;
   border: solid 1px #ddd;
   margin: 12px;
-  height: 159px;
+  height: 200px;
   width: 235px;
   padding: 13px;
 }
