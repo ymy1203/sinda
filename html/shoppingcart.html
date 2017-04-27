@@ -26,17 +26,17 @@
 			</p>
 			<p v-for="item in list">店铺：{{item.providerName}}</p>
 			<div class="cartaddhere">
-				<div class="cartlist" v-for="item in list">
-					<div class="cart_logo"><img :src="item.providerImg"></div>
+				<div class="cartlist" v-for="(item,index) in list" >
+					<div class="cart_logo"><img src="../imgs/shoplogo.jpg"></div>
 					<span>{{item.serviceName}}</span>
-					<span>￥{{item.unitPrice}}</span>
+					<span>￥{{item.unitPrice/100}}</span>
 					<div class="addorreduce">
-						<span @click="addNum(item)">+</span>
-						<input id="inNum" type="text" :value="num" @blur="inputBlur">
-						<span @click="subNum(item)">-</span>
+						<span @click="addNum(item,index,$event)">+</span>
+						<input id='inNum' type="text" :value="item.buyNum" @blur="inputBlur(item,index)">
+						<span @click="subNum(item,index,$event)">-</span>
 					</div>
-					<span class="col_b">￥{{total}}</span>
-					<span class="mar_no" @click="delate">删除</span>
+					<span  class="col_b xiaoji">{{item.unitPrice/100*item.buyNum}}</span>
+					<span class="mar_no" @click="delate(item,index,$event)">删除</span>
 				</div>
 				<!-- <div class="cartlist">
 					<div class="cart_logo"></div>
@@ -51,10 +51,10 @@
 					<span class="mar_no" @click="delate">删除</span>
 				</div> -->
 			</div>
-			<p class="total">金额总计&nbsp;<span class="font_b">￥800.00</span></p>
+			<p class="total">金额总计&nbsp;<span class="font_b" >￥{{total}}</span></p>
 			<p class="calculate">
 				<a href="shop_list.html">继续购物</a>
-				<a href="order.html">去结算</a>
+				<a href="javascript:void(0)" @click="goPay()">去结算</a>
 			</p>
 		</div>
 	</div>

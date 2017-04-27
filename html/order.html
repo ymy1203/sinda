@@ -18,26 +18,21 @@
 			<p class="title_r">订单详情</p>
 			<ul class="or_li">
 				<li class="li1">
-					<div class="order-num">订单编号：<span>S6272827272727211</span></div>
-					<div>创建时间：2017-07-01 01：12：21</div>
-					<div class="mar_no">订单金额：￥2000.00元
+					<div class="order-num">订单编号：<span>{{da.businessNo}}</span></div>
+					<div>创建时间：{{time}}</div>
+					<div class="mar_no">订单金额：￥{{(da.price/100).toFixed(2)}}元
 						<span class="span_red" @click="yincang()">订单明细&nbsp;
 							<span class="sanjiao"></span>
 						</span>
 					</div>
 				</li>
-				<li class="li2" v-if="hiden">
-					<div>服务名称：注册分公司</div>
-					<div>单价：<span>￥800.00元</span> </div>
-					<div>数量：<span>1</span></div>
-					<div class="mar_no">服务总额：<span>￥800.00元</span></div>
+				<li class="li2" v-if="hiden" v-for="item in detail">
+					<div>服务名称：{{item.serviceName}}</div>
+					<div>单价：<span>￥{{(item.unitPrice/100).toFixed(2)}}元</span> </div>
+					<div>数量：<span>{{item.buyNum}}</span></div>
+					<div class="mar_no">服务总额：<span>￥{{(item.totalPrice/100).toFixed(2)}}元</span></div>
 				</li>
-				<li class="li2" v-if="hiden">
-					<div>服务名称：注册分公司</div>
-					<div>单价：<span>￥800.00元</span> </div>
-					<div>数量：<span>1</span></div>
-					<div class="mar_no">服务总额：<span>￥800.00元</span></div>
-				</li>
+				
 			</ul>
 		</div>
 		<div class="paytype">
@@ -74,9 +69,9 @@
 				<span class="red">注：转账时请将订单编号备注在付款信息里：转账完成后，请通知客服。</span>
 			</div>
 		</div>
-		<p class="total">金额总计&nbsp;<span class="font_b">￥800.00</span></p>
+		<p class="total">金额总计&nbsp;<span class="font_b">￥{{(da.price/100).toFixed(2)}}</span></p>
 		<p class="calculate">
-			<a href="jiesuan.html">去结算</a>
+			<a href="pay.html">去结算</a>
 		</p>
 	</div>
 	<!--关于我们 脚部 -->

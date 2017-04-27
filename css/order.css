@@ -210,10 +210,10 @@ li {
 }
 .list .or_li li.li2 div {
   float: left;
-  width: 210px;
+  width: 299px;
   line-height: 73px;
   text-align: center;
-  margin-right: 100px;
+  // margin-right: 100px;
 }
 .paytype .type p {
   height: 66px;

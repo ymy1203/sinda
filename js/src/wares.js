@@ -78,6 +78,7 @@ require(['vue', 'jquery', 'header', 'headerlogo', 'footer'], function(Vue){
 		               	id:theId,
 						num:theNum			
 		            },
+		            async:false,
 		            dataType: "json",
 		            success: function(data, textStatus) {
 		                console.log(data); //未登录
